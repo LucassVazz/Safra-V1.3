@@ -1,0 +1,3526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safra — ADM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+<section class="safra-page" id="adm.alertas" data-page-title="Alertas | Safra">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#adm.usuarios">
+<span class="icone">♟</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item ativo" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">3</span>
+</a>
+<a class="menu-item" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+</aside>
+<!-- CONTEÚDO -->
+<main class="conteudo">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input placeholder="Buscar alerta..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao">
+
+                    ♧
+
+                    <span>3</span>
+</button>
+<div class="avatar">
+                    AD
+                </div>
+<div class="usuario-topo">
+<strong>
+                        Júnior Fernandez
+                    </strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">
+                    ⌄
+                </span>
+</div>
+</header>
+<!-- CABEÇALHO -->
+<section class="cabecalho">
+<div>
+<h1>
+                    Alertas
+                </h1>
+<p>
+                    Acompanhe alertas e situações que precisam de atenção no sistema Safra.
+                </p>
+</div>
+<button class="btn-marcar" id="btnMarcarTodos">
+                ✓ Marcar todos como lidos
+            </button>
+</section>
+<!-- STATUS -->
+<section class="status">
+<div class="status-icone">
+                !
+            </div>
+<div class="status-texto">
+<strong>
+                    Existem alertas que requerem atenção
+                </strong>
+<span>
+                    Verifique as ocorrências recentes do sistema.
+                </span>
+</div>
+<small>
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </small>
+</section>
+<!-- CARDS -->
+<section class="cards">
+<div class="card">
+<div class="card-icone vermelho">
+                    !
+                </div>
+<div class="card-info">
+<span>
+                        Alertas urgentes
+                    </span>
+<strong>
+                        1
+                    </strong>
+<small>
+                        Requer atenção imediata
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone amarelo">
+                    ⚠
+                </div>
+<div class="card-info">
+<span>
+                        Atenção
+                    </span>
+<strong>
+                        2
+                    </strong>
+<small>
+                        Precisam ser analisados
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone azul">
+                    i
+                </div>
+<div class="card-info">
+<span>
+                        Informativos
+                    </span>
+<strong>
+                        4
+                    </strong>
+<small>
+                        Novas informações
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone roxo">
+                    #
+                </div>
+<div class="card-info">
+<span>
+                        Total de alertas
+                    </span>
+<strong>
+                        7
+                    </strong>
+<small>
+                        Registrados no sistema
+                    </small>
+</div>
+</div>
+</section>
+<!-- FILTROS -->
+<section class="painel filtros-painel">
+<div class="painel-header">
+<div>
+<h2>
+                        Filtros
+                    </h2>
+<span>
+                        Encontre alertas específicos do sistema
+                    </span>
+</div>
+</div>
+<div class="filtros">
+<div class="campo">
+<label>
+                        Buscar
+                    </label>
+<div class="campo-input">
+<span>⌕</span>
+<input id="buscaAlerta" placeholder="Buscar por alerta..." type="text"/>
+</div>
+</div>
+<div class="campo">
+<label>
+                        Prioridade
+                    </label>
+<select id="prioridade">
+<option>
+                            Todas as prioridades
+                        </option>
+<option>
+                            Urgente
+                        </option>
+<option>
+                            Atenção
+                        </option>
+<option>
+                            Informativo
+                        </option>
+</select>
+</div>
+<div class="campo">
+<label>
+                        Status
+                    </label>
+<select id="status">
+<option>
+                            Todos os status
+                        </option>
+<option>
+                            Não lido
+                        </option>
+<option>
+                            Lido
+                        </option>
+</select>
+</div>
+<button class="btn-filtrar" id="btnFiltrar">
+                    Filtrar
+                </button>
+</div>
+</section>
+<!-- LISTA DE ALERTAS -->
+<section class="painel">
+<div class="painel-header">
+<div>
+<h2>
+                        Alertas recentes
+                    </h2>
+<span>
+                        Últimas ocorrências registradas no sistema
+                    </span>
+</div>
+<strong class="total">
+                    7 alertas
+                </strong>
+</div>
+<div class="alertas-lista">
+<!-- ALERTA 1 -->
+<div class="alerta-item urgente">
+<div class="alerta-icone vermelho">
+                        !
+                    </div>
+<div class="alerta-conteudo">
+<div class="alerta-titulo">
+<strong>
+                                Qualidade dos dados abaixo do esperado
+                            </strong>
+<span class="tag urgente-tag">
+                                Urgente
+                            </span>
+</div>
+<p>
+                            Foram identificadas inconsistências em uma das fontes de dados conectadas ao sistema.
+                        </p>
+<small>
+                            Dados • Hoje, 09:42
+                        </small>
+</div>
+<button class="btn-alerta">
+                        Ver detalhes
+                    </button>
+</div>
+<!-- ALERTA 2 -->
+<div class="alerta-item atencao">
+<div class="alerta-icone amarelo">
+                        ⚠
+                    </div>
+<div class="alerta-conteudo">
+<div class="alerta-titulo">
+<strong>
+                                Fonte de dados requer verificação
+                            </strong>
+<span class="tag atencao-tag">
+                                Atenção
+                            </span>
+</div>
+<p>
+                            Uma das fontes apresentou atraso na atualização dos dados.
+                        </p>
+<small>
+                            Dados • Hoje, 08:15
+                        </small>
+</div>
+<button class="btn-alerta">
+                        Ver detalhes
+                    </button>
+</div>
+<!-- ALERTA 3 -->
+<div class="alerta-item atencao">
+<div class="alerta-icone amarelo">
+                        ⚠
+                    </div>
+<div class="alerta-conteudo">
+<div class="alerta-titulo">
+<strong>
+                                Baixa atividade de usuário
+                            </strong>
+<span class="tag atencao-tag">
+                                Atenção
+                            </span>
+</div>
+<p>
+                            Foi registrada uma redução nos acessos de usuários durante o período analisado.
+                        </p>
+<small>
+                            Usuários • Ontem, 16:40
+                        </small>
+</div>
+<button class="btn-alerta">
+                        Ver detalhes
+                    </button>
+</div>
+<!-- ALERTA 4 -->
+<div class="alerta-item informativo">
+<div class="alerta-icone azul">
+                        i
+                    </div>
+<div class="alerta-conteudo">
+<div class="alerta-titulo">
+<strong>
+                                Dados atualizados
+                            </strong>
+<span class="tag informativo-tag">
+                                Informativo
+                            </span>
+</div>
+<p>
+                            A base de dados foi atualizada com sucesso.
+                        </p>
+<small>
+                            Sistema • Ontem, 14:20
+                        </small>
+</div>
+<button class="btn-alerta">
+                        Ver detalhes
+                    </button>
+</div>
+<!-- ALERTA 5 -->
+<div class="alerta-item informativo">
+<div class="alerta-icone azul">
+                        i
+                    </div>
+<div class="alerta-conteudo">
+<div class="alerta-titulo">
+<strong>
+                                Novo usuário cadastrado
+                            </strong>
+<span class="tag informativo-tag">
+                                Informativo
+                            </span>
+</div>
+<p>
+                            Um novo usuário foi adicionado ao sistema Safra.
+                        </p>
+<small>
+                            Usuários • Ontem, 11:32
+                        </small>
+</div>
+<button class="btn-alerta">
+                        Ver detalhes
+                    </button>
+</div>
+<!-- ALERTA 6 -->
+<div class="alerta-item informativo">
+<div class="alerta-icone azul">
+                        i
+                    </div>
+<div class="alerta-conteudo">
+<div class="alerta-titulo">
+<strong>
+                                Relatório disponível
+                            </strong>
+<span class="tag informativo-tag">
+                                Informativo
+                            </span>
+</div>
+<p>
+                            Um novo relatório geral do sistema está disponível para consulta.
+                        </p>
+<small>
+                            Relatórios • 18/09/2026
+                        </small>
+</div>
+<button class="btn-alerta">
+                        Ver detalhes
+                    </button>
+</div>
+<!-- ALERTA 7 -->
+<div class="alerta-item informativo">
+<div class="alerta-icone azul">
+                        i
+                    </div>
+<div class="alerta-conteudo">
+<div class="alerta-titulo">
+<strong>
+                                Sistema atualizado
+                            </strong>
+<span class="tag informativo-tag">
+                                Informativo
+                            </span>
+</div>
+<p>
+                            Os serviços do sistema Safra foram atualizados recentemente.
+                        </p>
+<small>
+                            Sistema • 17/09/2026
+                        </small>
+</div>
+<button class="btn-alerta">
+                        Ver detalhes
+                    </button>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+
+</section>
+<section class="safra-page" id="adm.configuracoes" data-page-title="Configurações | Safra" style="display:none">
+
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>
+                    Vale do São Francisco
+                </span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#adm.usuarios">
+<span class="icone">♟</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">
+                    3
+                </span>
+</a>
+<a class="menu-item ativo" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<!-- SAIR -->
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+</aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">
+                    ⌕
+                </span>
+<input placeholder="Buscar configuração..." type="text"/>
+</div>
+<div class="topbar-direita">
+<!-- Notificação -->
+<button class="notificacao">
+
+                    ♧
+
+                    <span>
+                        3
+                    </span>
+</button>
+<!-- Avatar -->
+<div class="avatar">
+                    JF
+                </div>
+<!-- Usuário -->
+<div class="usuario-topo">
+<strong>
+                        Júnior Fernandez
+                    </strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">
+                    ⌄
+                </span>
+</div>
+</header>
+<!-- =========================
+             CABEÇALHO DA PÁGINA
+        ========================== -->
+<section class="cabecalho">
+<div class="titulo-area">
+<div class="titulo-icone">
+                    ⚙️
+                </div>
+<div>
+<h1>
+                        Configurações
+                    </h1>
+<p>
+                        Gerencie suas informações, preferências e configurações do sistema.
+                    </p>
+</div>
+</div>
+<button class="btn-salvar" id="btnSalvar">
+                ✓ Salvar alterações
+            </button>
+</section>
+<section class="painel">
+<div class="painel-titulo">
+<div class="painel-icone perfil">
+                    👤
+                </div>
+<div>
+<h2>
+                        Meu perfil
+                    </h2>
+<span>
+                        Atualize suas informações pessoais e dados de acesso.
+                    </span>
+</div>
+</div>
+<div class="linha"></div>
+<div class="perfil-topo">
+<div class="avatar-grande">
+                    JF
+                </div>
+<div class="perfil-nome">
+<h3>
+                        Júnior Fernandez
+                    </h3>
+<span>
+                        Administrador do Sistema
+                    </span>
+<button class="btn-foto">
+                        Alterar foto
+                    </button>
+</div>
+</div>
+<div class="form-grid">
+<div class="campo">
+<label>
+                        Nome completo
+                    </label>
+<input type="text" value="Júnior Fernandez"/>
+</div>
+<div class="campo">
+<label>
+                        E-mail
+                    </label>
+<input type="email" value="junior@empresa.com"/>
+</div>
+<div class="campo">
+<label>
+                        Telefone
+                    </label>
+<input type="text" value="(87) 99999-7777"/>
+</div>
+<div class="campo">
+<label>
+                        Tipo de usuário
+                    </label>
+<input disabled="" type="text" value="Administrador do Sistema"/>
+</div>
+</div>
+</section>
+<section class="painel">
+<div class="painel-titulo">
+<div class="painel-icone notificacoes">
+                    🔔
+                </div>
+<div>
+<h2>
+                        Notificações
+                    </h2>
+<span>
+                        Escolha quais avisos deseja receber da plataforma.
+                    </span>
+</div>
+</div>
+<div class="opcoes">
+<div class="opcao">
+<div>
+<strong>
+                            Alertas do sistema
+                        </strong>
+<span>
+                            Receber notificações sobre alertas importantes.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<!-- Usuários -->
+<div class="opcao">
+<div>
+<strong>
+                            Novos usuários
+                        </strong>
+<span>
+                            Avisar quando um novo usuário for cadastrado.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<!-- Dados -->
+<div class="opcao">
+<div>
+<strong>
+                            Qualidade dos dados
+                        </strong>
+<span>
+                            Receber avisos sobre problemas ou inconsistências.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<!-- Relatórios -->
+<div class="opcao">
+<div>
+<strong>
+                            Relatórios
+                        </strong>
+<span>
+                            Notificar quando novos relatórios estiverem disponíveis.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+</div>
+</section>
+<!-- =========================
+             PREFERÊNCIAS
+        ========================== -->
+<section class="painel">
+<div class="painel-titulo">
+<div class="painel-icone preferencias">
+                    ◈
+                </div>
+<div>
+<h2>
+                        Preferências
+                    </h2>
+<span>
+                        Personalize a forma como o sistema apresenta as informações.
+                    </span>
+</div>
+</div>
+<div class="form-grid">
+<!-- Idioma -->
+<div class="campo">
+<label>
+                        Idioma
+                    </label>
+<select>
+<option>
+                            Português (Brasil)
+                        </option>
+<option>
+                            English
+                        </option>
+</select>
+</div>
+<!-- Unidade -->
+<div class="campo">
+<label>
+                        Unidade de medida
+                    </label>
+<select>
+<option>
+                            Tonelada (ton)
+                        </option>
+<option>
+                            Quilograma (kg)
+                        </option>
+</select>
+</div>
+<!-- Data -->
+<div class="campo">
+<label>
+                        Formato de data
+                    </label>
+<select>
+<option>
+                            DD/MM/AAAA
+                        </option>
+<option>
+                            MM/DD/AAAA
+                        </option>
+</select>
+</div>
+<!-- Atualização -->
+<div class="campo">
+<label>
+                        Atualização dos dados
+                    </label>
+<select>
+<option>
+                            Tempo real
+                        </option>
+<option>
+                            A cada 15 minutos
+                        </option>
+<option>
+                            A cada hora
+                        </option>
+</select>
+</div>
+</div>
+</section>
+<!-- =========================
+             SEGURANÇA
+        ========================== -->
+<section class="painel">
+<div class="painel-titulo">
+<div class="painel-icone seguranca">
+                    🔒
+                </div>
+<div>
+<h2>
+                        Segurança
+                    </h2>
+<span>
+                        Gerencie sua senha e as opções de segurança da conta.
+                    </span>
+</div>
+</div>
+<div class="opcoes">
+<!-- Alterar senha -->
+<div class="opcao">
+<div>
+<strong>
+                            Alterar senha
+                        </strong>
+<span>
+                            Atualize sua senha de acesso ao sistema.
+                        </span>
+</div>
+<button class="btn-secundario">
+                        Alterar
+                    </button>
+</div>
+<!-- 2FA -->
+<div class="opcao">
+<div>
+<strong>
+                            Autenticação em dois fatores
+                        </strong>
+<span>
+                            Adicione uma camada extra de segurança à sua conta.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+</div>
+</section>
+<!-- =========================
+             CONTA
+        ========================== -->
+<section class="painel conta">
+<div class="painel-titulo">
+<div class="painel-icone conta-icone">
+                    👤
+                </div>
+<div>
+<h2>
+                        Conta
+                    </h2>
+<span>
+                        Gerencie as ações da sua conta.
+                    </span>
+</div>
+</div>
+<div class="conta-acoes">
+<button class="btn-sair">
+                    ↪ Sair da conta
+                </button>
+</div>
+</section>
+<!-- =========================
+             FOOTER
+        ========================== -->
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+<!-- JavaScript -->
+
+</section>
+<section class="safra-page" id="adm.dados" data-page-title="Dados | Safra" style="display:none">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#adm.usuarios">
+<span class="icone">♟</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item ativo" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item alerta-menu" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">3</span>
+</a>
+<a class="menu-item" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+</aside>
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="conteudo">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input placeholder="Buscar dado..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao">
+                    ♧
+                    <span>3</span>
+</button>
+<div class="avatar">
+                    AD
+                </div>
+<div class="usuario-topo">
+<strong>Júnior Fernandez</strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">⌄</span>
+</div>
+</header>
+<!-- CABEÇALHO -->
+<section class="cabecalho">
+<div>
+<h1>Dados</h1>
+<p>
+                    Monitore a qualidade, processamento e atualização dos dados da Safra.
+                </p>
+</div>
+<button class="btn-atualizar" id="btnAtualizar">
+                ↻ Atualizar dados
+            </button>
+</section>
+<!-- STATUS DOS DADOS -->
+<section class="status">
+<div class="status-icone">
+                ✓
+            </div>
+<div class="status-texto">
+<strong>
+                    Sistema de dados funcionando normalmente
+                </strong>
+<span>
+                    Todas as fontes de dados estão sendo processadas normalmente.
+                </span>
+</div>
+<small>
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </small>
+</section>
+<!-- CARDS -->
+<section class="cards">
+<div class="card">
+<div class="card-icone verde">
+                    ◈
+                </div>
+<div class="card-info">
+<span>
+                        Dados processados
+                    </span>
+<strong>
+                        18.452
+                    </strong>
+<small>
+                        Últimas 24 horas
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone azul">
+                    ✓
+                </div>
+<div class="card-info">
+<span>
+                        Integridade dos dados
+                    </span>
+<strong>
+                        98,7%
+                    </strong>
+<small>
+                        Excelente
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone amarelo">
+                    ◉
+                </div>
+<div class="card-info">
+<span>
+                        Fontes conectadas
+                    </span>
+<strong>
+                        8
+                    </strong>
+<small>
+                        Todas online
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone roxo">
+                    ⚠
+                </div>
+<div class="card-info">
+<span>
+                        Dados com atenção
+                    </span>
+<strong>
+                        12
+                    </strong>
+<small>
+                        Requer análise
+                    </small>
+</div>
+</div>
+</section>
+<!-- PAINÉIS -->
+<section class="grid-paineis">
+<!-- QUALIDADE DOS DADOS -->
+<div class="painel">
+<div class="painel-header">
+<div>
+<h2>
+                            Qualidade dos dados
+                        </h2>
+<span>
+                            Integridade das principais fontes
+                        </span>
+</div>
+<strong class="percentual">
+                        98,7%
+                    </strong>
+</div>
+<div class="qualidade-item">
+<div class="qualidade-topo">
+<strong>
+                            Dados de produção
+                        </strong>
+<span>
+                            99,2%
+                        </span>
+</div>
+<div class="barra">
+<div style="width: 99.2%;"></div>
+</div>
+</div>
+<div class="qualidade-item">
+<div class="qualidade-topo">
+<strong>
+                            Dados climáticos
+                        </strong>
+<span>
+                            98,5%
+                        </span>
+</div>
+<div class="barra">
+<div style="width: 98.5%;"></div>
+</div>
+</div>
+<div class="qualidade-item">
+<div class="qualidade-topo">
+<strong>
+                            Dados de mercado
+                        </strong>
+<span>
+                            97,8%
+                        </span>
+</div>
+<div class="barra">
+<div style="width: 97.8%;"></div>
+</div>
+</div>
+<div class="qualidade-item">
+<div class="qualidade-topo">
+<strong>
+                            Dados de exportação
+                        </strong>
+<span>
+                            99,1%
+                        </span>
+</div>
+<div class="barra">
+<div style="width: 99.1%;"></div>
+</div>
+</div>
+</div>
+<!-- FONTES DE DADOS -->
+<div class="painel">
+<div class="painel-header">
+<div>
+<h2>
+                            Fontes de dados
+                        </h2>
+<span>
+                            Status das conexões
+                        </span>
+</div>
+<span class="online">
+                        • Online
+                    </span>
+</div>
+<div class="fonte">
+<div class="fonte-icone verde">
+                        ESP
+                    </div>
+<div class="fonte-info">
+<strong>
+                            ESP32
+                        </strong>
+<span>
+                            Sensores climáticos
+                        </span>
+</div>
+<b data-ts="status-esp32">
+                        Online
+                    </b>
+</div>
+<div class="fonte">
+<div class="fonte-icone azul">
+                        TS
+                    </div>
+<div class="fonte-info">
+<strong>
+                            ThingSpeak
+                        </strong>
+<span>
+                            Dados ambientais
+                        </span>
+</div>
+<b data-ts="status-thingspeak">
+                        Online
+                    </b>
+</div>
+<div class="fonte">
+<div class="fonte-icone amarelo">
+                        BD
+                    </div>
+<div class="fonte-info">
+<strong>
+                            Banco de dados
+                        </strong>
+<span>
+                            Dados do sistema
+                        </span>
+</div>
+<b>
+                        Online
+                    </b>
+</div>
+<div class="fonte">
+<div class="fonte-icone roxo">
+                        API
+                    </div>
+<div class="fonte-info">
+<strong>
+                            APIs externas
+                        </strong>
+<span>
+                            Mercado e clima
+                        </span>
+</div>
+<b>
+                        Online
+                    </b>
+</div>
+</div>
+</section>
+<!-- ATIVIDADES RECENTES -->
+<section class="painel atividades">
+<div class="painel-header">
+<div>
+<h2>
+                        Processamento recente
+                    </h2>
+<span>
+                        Últimas atividades realizadas nos dados
+                    </span>
+</div>
+<a href="#">
+                    Ver histórico
+                </a>
+</div>
+<div class="atividade">
+<div class="atividade-icone verde">
+                    ✓
+                </div>
+<div class="atividade-info">
+<strong>
+                        Dados climáticos processados
+                    </strong>
+<span>
+                        1.248 registros recebidos dos sensores ESP32
+                    </span>
+</div>
+<small>
+                    2 min
+                </small>
+</div>
+<div class="atividade">
+<div class="atividade-icone azul">
+                    ✓
+                </div>
+<div class="atividade-info">
+<strong>
+                        Dados de produção atualizados
+                    </strong>
+<span>
+                        842 registros processados com sucesso
+                    </span>
+</div>
+<small>
+                    12 min
+                </small>
+</div>
+<div class="atividade">
+<div class="atividade-icone amarelo">
+                    ✓
+                </div>
+<div class="atividade-info">
+<strong>
+                        Dados de mercado sincronizados
+                    </strong>
+<span>
+                        356 registros atualizados
+                    </span>
+</div>
+<small>
+                    28 min
+                </small>
+</div>
+<div class="atividade">
+<div class="atividade-icone roxo">
+                    ✓
+                </div>
+<div class="atividade-info">
+<strong>
+                        Dados de exportação atualizados
+                    </strong>
+<span>
+                        126 registros sincronizados
+                    </span>
+</div>
+<small>
+                    41 min
+                </small>
+</div>
+</section>
+<!-- RODAPÉ -->
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+
+</section>
+<section class="safra-page" id="adm.logs" data-page-title="Logs do sistema | Safra" style="display:none">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#adm.usuarios">
+<span class="icone">♟</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item ativo" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item alerta-menu" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">3</span>
+</a>
+<a class="menu-item" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+</aside>
+<!-- CONTEÚDO -->
+<main class="conteudo">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input id="buscaLog" placeholder="Buscar nos logs..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao">
+                    ♧
+                    <span>3</span>
+</button>
+<div class="avatar">
+                    AD
+                </div>
+<div class="usuario-topo">
+<strong>Júnior Fernandez</strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">⌄</span>
+</div>
+</header>
+<!-- CABEÇALHO -->
+<section class="cabecalho">
+<div>
+<h1>Logs do sistema</h1>
+<p>
+                    Acompanhe as atividades e eventos registrados no sistema Safra.
+                </p>
+</div>
+<button class="btn-exportar" id="btnExportar">
+                ↓ Exportar logs
+            </button>
+</section>
+<!-- STATUS -->
+<section class="status">
+<div class="status-icone">
+                ✓
+            </div>
+<div class="status-texto">
+<strong>
+                    Sistema operando normalmente
+                </strong>
+<span>
+                    Todos os eventos estão sendo registrados corretamente.
+                </span>
+</div>
+<small>
+                Última atividade há 2 min
+            </small>
+</section>
+<!-- CARDS -->
+<section class="cards">
+<div class="card">
+<div class="card-icone verde">
+                    ✓
+                </div>
+<div class="card-info">
+<span>
+                        Eventos hoje
+                    </span>
+<strong>
+                        1.248
+                    </strong>
+<small>
+                        +12% este mês
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone azul">
+                    ◉
+                </div>
+<div class="card-info">
+<span>
+                        Acessos registrados
+                    </span>
+<strong>
+                        386
+                    </strong>
+<small>
+                        Últimas 24 horas
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone amarelo">
+                    !
+                </div>
+<div class="card-info">
+<span>
+                        Avisos
+                    </span>
+<strong>
+                        17
+                    </strong>
+<small>
+                        Requer atenção
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone roxo">
+                    ⚠
+                </div>
+<div class="card-info">
+<span>
+                        Erros
+                    </span>
+<strong>
+                        3
+                    </strong>
+<small>
+                        Últimas 24 horas
+                    </small>
+</div>
+</div>
+</section>
+<!-- FILTROS -->
+<section class="painel filtros-painel">
+<div class="painel-header">
+<div>
+<h2>
+                        Filtros de logs
+                    </h2>
+<span>
+                        Encontre rapidamente um evento específico
+                    </span>
+</div>
+</div>
+<div class="filtros">
+<div class="campo">
+<label>Buscar</label>
+<div class="campo-input">
+<span>⌕</span>
+<input id="filtroBusca" placeholder="Usuário, ação ou descrição..." type="text"/>
+</div>
+</div>
+<div class="campo">
+<label>Tipo de evento</label>
+<select id="filtroTipo">
+<option value="">Todos os eventos</option>
+<option value="login">
+                            Login
+                        </option>
+<option value="usuario">
+                            Usuário
+                        </option>
+<option value="dados">
+                            Dados
+                        </option>
+<option value="sistema">
+                            Sistema
+                        </option>
+<option value="seguranca">
+                            Segurança
+                        </option>
+</select>
+</div>
+<div class="campo">
+<label>Período</label>
+<select id="filtroPeriodo">
+<option value="hoje">
+                            Hoje
+                        </option>
+<option value="7">
+                            Últimos 7 dias
+                        </option>
+<option value="30">
+                            Últimos 30 dias
+                        </option>
+</select>
+</div>
+<button class="btn-filtrar" id="btnFiltrar">
+                    Filtrar
+                </button>
+</div>
+</section>
+<!-- LOGS -->
+<section class="painel logs-painel">
+<div class="painel-header">
+<div>
+<h2>
+                        Atividades do sistema
+                    </h2>
+<span>
+                        Registro das últimas ações realizadas
+                    </span>
+</div>
+<strong class="total-logs">
+                    1.248 eventos
+                </strong>
+</div>
+<!-- CABEÇALHO DA TABELA -->
+<div class="tabela-cabecalho">
+<span>EVENTO</span>
+<span>USUÁRIO</span>
+<span>DATA E HORA</span>
+<span>STATUS</span>
+<span>AÇÃO</span>
+</div>
+<!-- LOG 1 -->
+<div class="log-item">
+<div class="evento">
+<div class="evento-icone verde">
+                        ✓
+                    </div>
+<div>
+<strong>
+                            Novo usuário cadastrado
+                        </strong>
+<span>
+                            Usuário João Silva foi adicionado ao sistema
+                        </span>
+</div>
+</div>
+<div class="usuario-log">
+                    Administrador
+                </div>
+<div class="data-log">
+                    Hoje, 09:42
+                </div>
+<div>
+<span class="status-log sucesso">
+                        Sucesso
+                    </span>
+</div>
+<button class="btn-detalhes">
+                    Ver
+                </button>
+</div>
+<!-- LOG 2 -->
+<div class="log-item">
+<div class="evento">
+<div class="evento-icone azul">
+                        ✓
+                    </div>
+<div>
+<strong>
+                            Dados atualizados
+                        </strong>
+<span>
+                            Base de dados atualizada com sucesso
+                        </span>
+</div>
+</div>
+<div class="usuario-log">
+                    Sistema
+                </div>
+<div class="data-log">
+                    Hoje, 09:25
+                </div>
+<div>
+<span class="status-log sucesso">
+                        Sucesso
+                    </span>
+</div>
+<button class="btn-detalhes">
+                    Ver
+                </button>
+</div>
+<!-- LOG 3 -->
+<div class="log-item">
+<div class="evento">
+<div class="evento-icone amarelo">
+                        !
+                    </div>
+<div>
+<strong>
+                            Tentativa de acesso
+                        </strong>
+<span>
+                            Tentativa de login com credenciais inválidas
+                        </span>
+</div>
+</div>
+<div class="usuario-log">
+                    Usuário
+                </div>
+<div class="data-log">
+                    Hoje, 08:57
+                </div>
+<div>
+<span class="status-log aviso">
+                        Aviso
+                    </span>
+</div>
+<button class="btn-detalhes">
+                    Ver
+                </button>
+</div>
+<!-- LOG 4 -->
+<div class="log-item">
+<div class="evento">
+<div class="evento-icone verde">
+                        ✓
+                    </div>
+<div>
+<strong>
+                            Modelo preditivo atualizado
+                        </strong>
+<span>
+                            Modelo de previsão de produtividade atualizado
+                        </span>
+</div>
+</div>
+<div class="usuario-log">
+                    Maria Alves
+                </div>
+<div class="data-log">
+                    Hoje, 08:31
+                </div>
+<div>
+<span class="status-log sucesso">
+                        Sucesso
+                    </span>
+</div>
+<button class="btn-detalhes">
+                    Ver
+                </button>
+</div>
+<!-- LOG 5 -->
+<div class="log-item">
+<div class="evento">
+<div class="evento-icone roxo">
+                        ⚠
+                    </div>
+<div>
+<strong>
+                            Falha na sincronização
+                        </strong>
+<span>
+                            Não foi possível sincronizar uma fonte externa
+                        </span>
+</div>
+</div>
+<div class="usuario-log">
+                    Sistema
+                </div>
+<div class="data-log">
+                    Hoje, 08:12
+                </div>
+<div>
+<span class="status-log erro">
+                        Erro
+                    </span>
+</div>
+<button class="btn-detalhes">
+                    Ver
+                </button>
+</div>
+<!-- LOG 6 -->
+<div class="log-item">
+<div class="evento">
+<div class="evento-icone azul">
+                        ✓
+                    </div>
+<div>
+<strong>
+                            Login realizado
+                        </strong>
+<span>
+                            Acesso ao sistema realizado com sucesso
+                        </span>
+</div>
+</div>
+<div class="usuario-log">
+                    João Silva
+                </div>
+<div class="data-log">
+                    Hoje, 07:48
+                </div>
+<div>
+<span class="status-log sucesso">
+                        Sucesso
+                    </span>
+</div>
+<button class="btn-detalhes">
+                    Ver
+                </button>
+</div>
+</section>
+<!-- PAGINAÇÃO -->
+<div class="paginacao">
+<span>
+                Mostrando 1–6 de 1.248 eventos
+            </span>
+<div class="paginas">
+<button class="pagina-btn ativo">1</button>
+<button class="pagina-btn">2</button>
+<button class="pagina-btn">3</button>
+<button class="pagina-btn">...</button>
+<button class="pagina-btn">208</button>
+<button class="pagina-btn">›</button>
+</div>
+</div>
+<!-- FOOTER -->
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+
+</section>
+<section class="safra-page" id="adm.permissoes" data-page-title="Permissões - Administrador | Safra" style="display:none">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#adm.usuarios">
+<span class="icone">♙</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item ativo" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item alerta-menu" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">3</span>
+</a>
+<a class="menu-item" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+</aside>
+<!-- CONTEÚDO -->
+<main class="conteudo">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input placeholder="Buscar permissão..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao">
+                    ♧
+                    <span>3</span>
+</button>
+<div class="avatar">
+                    AD
+                </div>
+<div class="usuario-topo">
+<strong>Júnior Fernandez</strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">⌄</span>
+</div>
+</header>
+<!-- CABEÇALHO -->
+<section class="cabecalho">
+<div>
+<h1>Permissões</h1>
+<p>
+                    Gerencie os níveis de acesso e permissões dos usuários.
+                </p>
+</div>
+<button class="btn-nova-permissao">
+                + Nova permissão
+            </button>
+</section>
+<!-- CARDS -->
+<section class="cards">
+<div class="card">
+<div class="card-icone verde">
+                    ♙
+                </div>
+<div class="card-info">
+<span>Perfis cadastrados</span>
+<strong>4</strong>
+<small>
+                        Perfis de acesso
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone azul">
+                    ✓
+                </div>
+<div class="card-info">
+<span>Usuários com acesso</span>
+<strong>24</strong>
+<small>
+                        Usuários cadastrados
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone amarelo">
+                    ◉
+                </div>
+<div class="card-info">
+<span>Permissões ativas</span>
+<strong>18</strong>
+<small>
+                        Em funcionamento
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone roxo">
+                    ⚠
+                </div>
+<div class="card-info">
+<span>Alterações recentes</span>
+<strong>5</strong>
+<small>
+                        Últimos 7 dias
+                    </small>
+</div>
+</div>
+</section>
+<!-- PERFIS -->
+<section class="painel">
+<div class="painel-header">
+<div>
+<h2>Perfis de acesso</h2>
+<span>
+                        Defina o que cada perfil pode acessar no sistema.
+                    </span>
+</div>
+<span class="contador">
+                    4 perfis
+                </span>
+</div>
+<div class="perfis-lista">
+<div class="perfil-card">
+<div class="perfil-icone produtor">
+                        ♙
+                    </div>
+<div class="perfil-info">
+<strong>Produtor</strong>
+<span>
+                            Acesso às informações de produção,
+                            lavouras e histórico.
+                        </span>
+</div>
+<div class="perfil-acesso">
+<b>12</b>
+<span>usuários</span>
+</div>
+<button class="btn-gerenciar">
+                        Gerenciar
+                    </button>
+</div>
+<div class="perfil-card">
+<div class="perfil-icone analista">
+                        ◈
+                    </div>
+<div class="perfil-info">
+<strong>Analista de Dados</strong>
+<span>
+                            Acesso aos dados, modelos preditivos
+                            e previsões.
+                        </span>
+</div>
+<div class="perfil-acesso">
+<b>6</b>
+<span>usuários</span>
+</div>
+<button class="btn-gerenciar">
+                        Gerenciar
+                    </button>
+</div>
+<div class="perfil-card">
+<div class="perfil-icone administrador">
+                        ⚙
+                    </div>
+<div class="perfil-info">
+<strong>Administrador</strong>
+<span>
+                            Acesso completo ao gerenciamento
+                            do sistema.
+                        </span>
+</div>
+<div class="perfil-acesso">
+<b>3</b>
+<span>usuários</span>
+</div>
+<button class="btn-gerenciar">
+                        Gerenciar
+                    </button>
+</div>
+<div class="perfil-card">
+<div class="perfil-icone exportador">
+                        ⇢
+                    </div>
+<div class="perfil-info">
+<strong>Exportador</strong>
+<span>
+                            Acesso à exportação, logística
+                            e informações de mercado.
+                        </span>
+</div>
+<div class="perfil-acesso">
+<b>3</b>
+<span>usuários</span>
+</div>
+<button class="btn-gerenciar">
+                        Gerenciar
+                    </button>
+</div>
+</div>
+</section>
+<!-- MATRIZ DE PERMISSÕES -->
+<section class="painel matriz">
+<div class="painel-header">
+<div>
+<h2>Matriz de permissões</h2>
+<span>
+                        Visualização geral dos acessos por perfil.
+                    </span>
+</div>
+</div>
+<div class="tabela-container">
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Produtor</th>
+<th>Analista</th>
+<th>Administrador</th>
+<th>Exportador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dashboard</td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+</tr>
+<tr>
+<td>Dados</td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="bloqueado">—</span></td>
+</tr>
+<tr>
+<td>Modelos preditivos</td>
+<td><span class="bloqueado">—</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="bloqueado">—</span></td>
+</tr>
+<tr>
+<td>Usuários</td>
+<td><span class="bloqueado">—</span></td>
+<td><span class="bloqueado">—</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="bloqueado">—</span></td>
+</tr>
+<tr>
+<td>Exportação</td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+<td><span class="permitido">✓</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+</section>
+<section class="safra-page" id="adm.relatorios" data-page-title="Relatórios | Safra" style="display:none">
+
+<!-- =========================
+         SIDEBAR
+    ========================== -->
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#adm.usuarios">
+<span class="icone">♟</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item ativo" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item alerta-menu" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">3</span>
+</a>
+<a class="menu-item" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+</aside>
+<!-- =========================
+         CONTEÚDO
+    ========================== -->
+<main class="conteudo">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input placeholder="Buscar relatório..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao">
+
+                    ♧
+
+                    <span>3</span>
+</button>
+<div class="avatar">
+                    AD
+                </div>
+<div class="usuario-topo">
+<strong>
+                        Júnior Fernandez
+                    </strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">
+                    ⌄
+                </span>
+</div>
+</header>
+<!-- CABEÇALHO -->
+<section class="cabecalho">
+<div>
+<h1>
+                    Relatórios
+                </h1>
+<p>
+                    Consulte informações e acompanhe o desempenho do sistema Safra.
+                </p>
+</div>
+<button class="btn-gerar" id="btnGerar">
+
+                + Gerar relatório
+
+            </button>
+</section>
+<!-- STATUS -->
+<section class="status">
+<div class="status-icone">
+                ✓
+            </div>
+<div class="status-texto">
+<strong>
+                    Relatórios atualizados
+                </strong>
+<span>
+                    Os dados dos relatórios foram processados recentemente.
+                </span>
+</div>
+<small>
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </small>
+</section>
+<!-- CARDS -->
+<section class="cards">
+<div class="card">
+<div class="card-icone verde">
+                    ▤
+                </div>
+<div class="card-info">
+<span>
+                        Relatórios gerados
+                    </span>
+<strong>
+                        48
+                    </strong>
+<small>
+                        Este mês
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone azul">
+                    ✓
+                </div>
+<div class="card-info">
+<span>
+                        Dados analisados
+                    </span>
+<strong>
+                        18.452
+                    </strong>
+<small>
+                        Últimas 24 horas
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone amarelo">
+                    ◉
+                </div>
+<div class="card-info">
+<span>
+                        Usuários ativos
+                    </span>
+<strong>
+                        21
+                    </strong>
+<small>
+                        87,5% do total
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone roxo">
+                    ⚠
+                </div>
+<div class="card-info">
+<span>
+                        Alertas registrados
+                    </span>
+<strong>
+                        12
+                    </strong>
+<small>
+                        Requerem análise
+                    </small>
+</div>
+</div>
+</section>
+<!-- FILTROS -->
+<section class="painel filtros-painel">
+<div class="painel-header">
+<div>
+<h2>
+                        Filtros
+                    </h2>
+<span>
+                        Selecione os dados que deseja consultar
+                    </span>
+</div>
+</div>
+<div class="filtros">
+<div class="campo">
+<label>
+                        Período
+                    </label>
+<select id="periodo">
+<option>
+                            Últimos 7 dias
+                        </option>
+<option selected="">
+                            Últimos 30 dias
+                        </option>
+<option>
+                            Últimos 6 meses
+                        </option>
+<option>
+                            Último ano
+                        </option>
+</select>
+</div>
+<div class="campo">
+<label>
+                        Tipo de relatório
+                    </label>
+<select id="tipoRelatorio">
+<option>
+                            Todos os relatórios
+                        </option>
+<option>
+                            Usuários
+                        </option>
+<option>
+                            Dados
+                        </option>
+<option>
+                            Logs
+                        </option>
+<option>
+                            Sistema
+                        </option>
+<option>
+                            Alertas
+                        </option>
+</select>
+</div>
+<div class="campo">
+<label>
+                        Formato
+                    </label>
+<select id="formato">
+<option>
+                            PDF
+                        </option>
+<option>
+                            Excel
+                        </option>
+<option>
+                            CSV
+                        </option>
+</select>
+</div>
+<button class="btn-filtrar" id="btnFiltrar">
+                    Filtrar
+                </button>
+</div>
+</section>
+<!-- RELATÓRIOS DISPONÍVEIS -->
+<section class="painel">
+<div class="painel-header">
+<div>
+<h2>
+                        Relatórios disponíveis
+                    </h2>
+<span>
+                        Informações consolidadas do sistema Safra
+                    </span>
+</div>
+<strong class="total">
+                    6 relatórios
+                </strong>
+</div>
+<div class="relatorios-grid">
+<!-- RELATÓRIO 1 -->
+<div class="relatorio-card">
+<div class="relatorio-topo">
+<div class="relatorio-icone verde">
+                            ♟
+                        </div>
+<span class="status-disponivel">
+                            Disponível
+                        </span>
+</div>
+<h3>
+                        Relatório de usuários
+                    </h3>
+<p>
+                        Consulte usuários cadastrados,
+                        perfis, acessos e status das contas.
+                    </p>
+<div class="relatorio-info">
+<span>
+                            Atualizado hoje
+                        </span>
+<strong>
+                            24 usuários
+                        </strong>
+</div>
+<button class="btn-ver">
+                        Ver relatório
+                    </button>
+</div>
+<!-- RELATÓRIO 2 -->
+<div class="relatorio-card">
+<div class="relatorio-topo">
+<div class="relatorio-icone azul">
+                            ◈
+                        </div>
+<span class="status-disponivel">
+                            Disponível
+                        </span>
+</div>
+<h3>
+                        Relatório de dados
+                    </h3>
+<p>
+                        Acompanhe qualidade, processamento
+                        e atualização das fontes de dados.
+                    </p>
+<div class="relatorio-info">
+<span>
+                            Atualizado há 15 min
+                        </span>
+<strong>
+                            18.452 registros
+                        </strong>
+</div>
+<button class="btn-ver">
+                        Ver relatório
+                    </button>
+</div>
+<!-- RELATÓRIO 3 -->
+<div class="relatorio-card">
+<div class="relatorio-topo">
+<div class="relatorio-icone amarelo">
+                            ☷
+                        </div>
+<span class="status-disponivel">
+                            Disponível
+                        </span>
+</div>
+<h3>
+                        Relatório de atividades
+                    </h3>
+<p>
+                        Visualize os eventos, acessos e
+                        principais atividades realizadas.
+                    </p>
+<div class="relatorio-info">
+<span>
+                            Atualizado hoje
+                        </span>
+<strong>
+                            1.248 eventos
+                        </strong>
+</div>
+<button class="btn-ver">
+                        Ver relatório
+                    </button>
+</div>
+<!-- RELATÓRIO 4 -->
+<div class="relatorio-card">
+<div class="relatorio-topo">
+<div class="relatorio-icone roxo">
+                            ⚙
+                        </div>
+<span class="status-disponivel">
+                            Disponível
+                        </span>
+</div>
+<h3>
+                        Relatório do sistema
+                    </h3>
+<p>
+                        Acompanhe desempenho, disponibilidade
+                        e funcionamento dos serviços.
+                    </p>
+<div class="relatorio-info">
+<span>
+                            Atualizado há 5 min
+                        </span>
+<strong>
+                            99,9% online
+                        </strong>
+</div>
+<button class="btn-ver">
+                        Ver relatório
+                    </button>
+</div>
+<!-- RELATÓRIO 5 -->
+<div class="relatorio-card">
+<div class="relatorio-topo">
+<div class="relatorio-icone vermelho">
+                            ⚠
+                        </div>
+<span class="status-atencao">
+                            Atenção
+                        </span>
+</div>
+<h3>
+                        Relatório de alertas
+                    </h3>
+<p>
+                        Consulte alertas, ocorrências e
+                        situações que precisam de atenção.
+                    </p>
+<div class="relatorio-info">
+<span>
+                            Atualizado hoje
+                        </span>
+<strong>
+                            12 alertas
+                        </strong>
+</div>
+<button class="btn-ver">
+                        Ver relatório
+                    </button>
+</div>
+<!-- RELATÓRIO 6 -->
+<div class="relatorio-card">
+<div class="relatorio-topo">
+<div class="relatorio-icone verde">
+                            ▣
+                        </div>
+<span class="status-disponivel">
+                            Disponível
+                        </span>
+</div>
+<h3>
+                        Relatório geral
+                    </h3>
+<p>
+                        Visão consolidada dos principais
+                        indicadores do sistema Safra.
+                    </p>
+<div class="relatorio-info">
+<span>
+                            Atualizado hoje
+                        </span>
+<strong>
+                            Dados completos
+                        </strong>
+</div>
+<button class="btn-ver">
+                        Ver relatório
+                    </button>
+</div>
+</div>
+</section>
+<!-- RESUMO -->
+<section class="resumo-grid">
+<div class="painel resumo">
+<div class="painel-header">
+<div>
+<h2>
+                            Resumo do sistema
+                        </h2>
+<span>
+                            Últimos 30 dias
+                        </span>
+</div>
+</div>
+<div class="resumo-lista">
+<div class="resumo-item">
+<div class="resumo-label">
+<span class="bolinha verde-bg"></span>
+
+                            Usuários cadastrados
+
+                        </div>
+<strong>
+                            24
+                        </strong>
+</div>
+<div class="resumo-item">
+<div class="resumo-label">
+<span class="bolinha azul-bg"></span>
+
+                            Dados processados
+
+                        </div>
+<strong>
+                            18.452
+                        </strong>
+</div>
+<div class="resumo-item">
+<div class="resumo-label">
+<span class="bolinha amarelo-bg"></span>
+
+                            Eventos registrados
+
+                        </div>
+<strong>
+                            1.248
+                        </strong>
+</div>
+<div class="resumo-item">
+<div class="resumo-label">
+<span class="bolinha roxo-bg"></span>
+
+                            Alertas
+
+                        </div>
+<strong>
+                            12
+                        </strong>
+</div>
+</div>
+</div>
+<!-- ÚLTIMOS RELATÓRIOS -->
+<div class="painel recentes">
+<div class="painel-header">
+<div>
+<h2>
+                            Relatórios recentes
+                        </h2>
+<span>
+                            Últimos arquivos gerados
+                        </span>
+</div>
+<a href="#">
+                        Ver todos
+                    </a>
+</div>
+<div class="relatorio-recente">
+<div class="mini-icone verde">
+                        PDF
+                    </div>
+<div>
+<strong>
+                            Relatório geral do sistema
+                        </strong>
+<span>
+                            Gerado hoje, 09:42
+                        </span>
+</div>
+<button>
+                        ↓
+                    </button>
+</div>
+<div class="relatorio-recente">
+<div class="mini-icone azul">
+                        PDF
+                    </div>
+<div>
+<strong>
+                            Relatório de dados
+                        </strong>
+<span>
+                            Gerado ontem, 16:30
+                        </span>
+</div>
+<button>
+                        ↓
+                    </button>
+</div>
+<div class="relatorio-recente">
+<div class="mini-icone amarelo">
+                        XLS
+                    </div>
+<div>
+<strong>
+                            Relatório de usuários
+                        </strong>
+<span>
+                            Gerado ontem, 11:18
+                        </span>
+</div>
+<button>
+                        ↓
+                    </button>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+
+</section>
+<section class="safra-page" id="adm.inicial" data-page-title="Inicial - Administrador | Safra" style="display:none">
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item ativo" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#adm.usuarios">
+<span class="icone">♙</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item alerta-menu" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">3</span>
+</a>
+<a class="menu-item" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+
+</aside>
+<!-- ================= CONTEÚDO ================= -->
+<main class="conteudo">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input id="campoBusca" placeholder="Buscar usuário, dado..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao" id="btnNotificacao">
+                    ♧
+                    <span>3</span>
+</button>
+<div class="avatar">
+                    AD
+                </div>
+<div class="usuario-topo">
+<strong>Júnior Fernandez</strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">⌄</span>
+</div>
+</header>
+<!-- ================= CABEÇALHO ================= -->
+<section class="cabecalho">
+<div class="titulo-area">
+<div class="icone-titulo">
+                    ⚙
+                </div>
+<div>
+<h1>Olá, Junior!</h1>
+<p>
+                        Acompanhe os usuários, dados e funcionamento
+                        do sistema Safra.
+                    </p>
+</div>
+</div>
+<button class="btn-atualizar" id="btnAtualizar">
+                ↻ Atualizar dados
+            </button>
+</section>
+<!-- ================= STATUS ================= -->
+<section class="status-sistema">
+<div class="status-icone">
+                ✓
+            </div>
+<div class="status-texto">
+<strong>Sistema funcionando normalmente</strong>
+<span>
+                    Todos os serviços estão operando normalmente.
+                </span>
+</div>
+<span class="ultima-atualizacao" id="ultimaAtualizacao">
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </span>
+</section>
+<!-- ================= CARDS ================= -->
+<section class="cards">
+<div class="card">
+<div class="card-icone verde">
+                    ♙
+                </div>
+<div class="card-info">
+<span>Usuários ativos</span>
+<strong id="usuariosAtivos">
+                        24
+                    </strong>
+<small>
+                        +3 este mês
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone azul">
+                    ✓
+                </div>
+<div class="card-info">
+<span>Integridade dos dados</span>
+<strong id="integridade">
+                        98,7%
+                    </strong>
+<small>
+                        Excelente
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone amarelo">
+                    ◉
+                </div>
+<div class="card-info">
+<span>Dados processados</span>
+<strong id="dadosProcessados">
+                        18.452
+                    </strong>
+<small>
+                        Últimas 24 horas
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone roxo">
+                    ⚠
+                </div>
+<div class="card-info">
+<span>Alertas do sistema</span>
+<strong id="alertasSistema">
+                        3
+                    </strong>
+<small>
+                        1 urgente
+                    </small>
+</div>
+</div>
+</section>
+<!-- ================= ÁREA PRINCIPAL ================= -->
+<section class="painel-grid">
+<!-- ATIVIDADES -->
+<div class="painel atividades">
+<div class="painel-header">
+<div>
+<h2>Atividades recentes</h2>
+<span>
+                            Últimas ações realizadas no sistema
+                        </span>
+</div>
+<a href="#">
+                        Ver todas
+                    </a>
+</div>
+<div class="atividade-lista">
+<div class="atividade">
+<div class="atividade-icone usuario">
+                            ♙
+                        </div>
+<div class="atividade-texto">
+<strong>
+                                Novo usuário cadastrado
+                            </strong>
+<span>
+                                João Silva foi adicionado como Produtor
+                            </span>
+</div>
+<small>
+                            5 min
+                        </small>
+</div>
+<div class="atividade">
+<div class="atividade-icone dados">
+                            ✓
+                        </div>
+<div class="atividade-texto">
+<strong>
+                                Dados atualizados
+                            </strong>
+<span>
+                                Base de produção atualizada
+                            </span>
+</div>
+<small>
+                            18 min
+                        </small>
+</div>
+<div class="atividade">
+<div class="atividade-icone permissao">
+                            ⚙
+                        </div>
+<div class="atividade-texto">
+<strong>
+                                Permissão alterada
+                            </strong>
+<span>
+                                Permissões do usuário atualizadas
+                            </span>
+</div>
+<small>
+                            42 min
+                        </small>
+</div>
+<div class="atividade">
+<div class="atividade-icone modelo">
+                            ◈
+                        </div>
+<div class="atividade-texto">
+<strong>
+                                Modelo atualizado
+                            </strong>
+<span>
+                                Modelo de previsão recebeu novos dados
+                            </span>
+</div>
+<small>
+                            1h
+                        </small>
+</div>
+</div>
+</div>
+<!-- STATUS -->
+<div class="painel status-modelos">
+<div class="painel-header">
+<div>
+<h2>Status do sistema</h2>
+<span>
+                            Monitoramento atual
+                        </span>
+</div>
+<span class="online">
+                        ● Online
+                    </span>
+</div>
+<div class="status-lista">
+<div class="status-item">
+<div>
+<strong>Servidor</strong>
+<span>Funcionando normalmente</span>
+</div>
+<b>99,9%</b>
+</div>
+<div class="status-item">
+<div>
+<strong>Banco de dados</strong>
+<span>Funcionando normalmente</span>
+</div>
+<b>99,8%</b>
+</div>
+<div class="status-item">
+<div>
+<strong>Modelos preditivos</strong>
+<span>6 modelos ativos</span>
+</div>
+<b>94,8%</b>
+</div>
+<div class="status-item">
+<div>
+<strong>Dispositivo ESP32</strong>
+<span>Última comunicação <span data-ts="tempo-relativo">há 15s</span></span>
+</div>
+<b data-ts="status-esp32">Online</b>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= USUÁRIOS ================= -->
+<section class="painel usuarios-painel">
+<div class="painel-header">
+<div>
+<h2>Usuários por perfil</h2>
+<span>
+                        Distribuição dos usuários cadastrados
+                    </span>
+</div>
+<a href="#">
+                    Gerenciar usuários
+                </a>
+</div>
+<div class="usuarios-grid">
+<div class="perfil">
+<div class="perfil-icone produtor">
+                        ♙
+                    </div>
+<div class="perfil-info">
+<strong>Produtores</strong>
+<span>
+                            Usuários com acesso à produção
+                        </span>
+</div>
+<b>12</b>
+</div>
+<div class="perfil">
+<div class="perfil-icone analista">
+                        ◈
+                    </div>
+<div class="perfil-info">
+<strong>Analistas de Dados</strong>
+<span>
+                            Usuários responsáveis pelos modelos
+                        </span>
+</div>
+<b>6</b>
+</div>
+<div class="perfil">
+<div class="perfil-icone administrador">
+                        ⚙
+                    </div>
+<div class="perfil-info">
+<strong>Administradores</strong>
+<span>
+                            Usuários com acesso administrativo
+                        </span>
+</div>
+<b>3</b>
+</div>
+<div class="perfil">
+<div class="perfil-icone exportador">
+                        ⇢
+                    </div>
+<div class="perfil-info">
+<strong>Exportadores</strong>
+<span>
+                            Usuários de exportação e logística
+                        </span>
+</div>
+<b>3</b>
+</div>
+</div>
+
+</section>
+<!-- ================= RODAPÉ ================= -->
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span id="rodapeStatus">
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+
+</section>
+<section class="safra-page" id="adm.usuarios" data-page-title="Usuários - Administrador | Safra" style="display:none">
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#adm.inicial">
+<span class="icone">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item ativo" href="#adm.usuarios">
+<span class="icone">♙</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="#adm.permissoes">
+<span class="icone">▦</span>
+<span>Permissões</span>
+</a>
+<a class="menu-item" href="#adm.dados">
+<span class="icone">▤</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#adm.logs">
+<span class="icone">☷</span>
+<span>Logs do sistema</span>
+</a>
+<a class="menu-item" href="#adm.relatorios">
+<span class="icone">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item alerta-menu" href="#adm.alertas">
+<span class="icone">♧</span>
+<span>Alertas</span>
+<span class="badge">3</span>
+</a>
+<a class="menu-item" href="#adm.configuracoes">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a class="menu-item sair" href="#">
+<span class="icone">↪</span>
+<span>Sair</span>
+</a>
+</div>
+
+</aside>
+<!-- ================= CONTEÚDO ================= -->
+<main class="conteudo">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input id="campoBusca" placeholder="Buscar usuário..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao" id="btnNotificacao">
+                    ♧
+                    <span>3</span>
+</button>
+<div class="avatar">
+                    AD
+                </div>
+<div class="usuario-topo">
+<strong>Júnior Fernandez</strong>
+<span>
+                        Administrador do Sistema
+                    </span>
+</div>
+<span class="seta">⌄</span>
+</div>
+</header>
+<!-- ================= CABEÇALHO ================= -->
+<section class="cabecalho">
+<div>
+<h1>Usuários</h1>
+<p>
+                    Gerencie os usuários e acessos ao sistema Safra.
+                </p>
+</div>
+<button class="btn-novo" id="btnNovoUsuario">
+                + Novo usuário
+            </button>
+</section>
+<!-- ================= INDICADORES ================= -->
+<section class="cards">
+<div class="card">
+<div class="card-icone verde">
+                    ♙
+                </div>
+<div class="card-info">
+<span>Total de usuários</span>
+<strong id="totalUsuarios">
+                        24
+                    </strong>
+<small>
+                        Cadastrados no sistema
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone azul">
+                    ✓
+                </div>
+<div class="card-info">
+<span>Usuários ativos</span>
+<strong id="usuariosAtivos">
+                        21
+                    </strong>
+<small>
+                        87,5% do total
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone amarelo">
+                    ◉
+                </div>
+<div class="card-info">
+<span>Novos usuários</span>
+<strong>
+                        3
+                    </strong>
+<small>
+                        Neste mês
+                    </small>
+</div>
+</div>
+<div class="card">
+<div class="card-icone roxo">
+                    ⚠
+                </div>
+<div class="card-info">
+<span>Aguardando acesso</span>
+<strong>
+                        2
+                    </strong>
+<small>
+                        Requer atenção
+                    </small>
+</div>
+</div>
+</section>
+<!-- ================= LISTA DE USUÁRIOS ================= -->
+<section class="painel usuarios-painel">
+<div class="painel-header">
+<div>
+<h2>Usuários cadastrados</h2>
+<span>
+                        Visualize e gerencie os usuários do sistema
+                    </span>
+</div>
+<span class="contador">
+                    24 usuários
+                </span>
+</div>
+<!-- FILTROS -->
+<div class="filtros">
+<div class="filtro-busca">
+<span>⌕</span>
+<input id="buscaUsuario" placeholder="Buscar por nome ou e-mail..." type="text"/>
+</div>
+<select id="filtroPerfil">
+<option value="todos">
+                        Todos os perfis
+                    </option>
+<option value="produtor">
+                        Produtor
+                    </option>
+<option value="analista">
+                        Analista de Dados
+                    </option>
+<option value="administrador">
+                        Administrador
+                    </option>
+<option value="exportador">
+                        Exportador
+                    </option>
+</select>
+<select id="filtroStatus">
+<option value="todos">
+                        Todos os status
+                    </option>
+<option value="ativo">
+                        Ativo
+                    </option>
+<option value="pendente">
+                        Pendente
+                    </option>
+<option value="inativo">
+                        Inativo
+                    </option>
+</select>
+</div>
+<!-- TABELA -->
+<div class="tabela-container">
+<table>
+<thead>
+<tr>
+<th>Usuário</th>
+<th>Perfil</th>
+<th>Status</th>
+<th>Último acesso</th>
+<th>Ações</th>
+</tr>
+</thead>
+<tbody id="listaUsuarios">
+<!-- USUÁRIO 1 -->
+<tr data-perfil="produtor" data-status="ativo">
+<td>
+<div class="usuario-tabela">
+<div class="avatar-tabela verde">
+                                        JS
+                                    </div>
+<div>
+<strong>
+                                            João Silva
+                                        </strong>
+<span>
+                                            joao@email.com
+                                        </span>
+</div>
+</div>
+</td>
+<td>
+<span class="perfil produtor">
+                                    Produtor
+                                </span>
+</td>
+<td>
+<span class="status ativo">
+<i></i>
+                                    Ativo
+                                </span>
+</td>
+<td>
+                                Hoje, 09:42
+                            </td>
+<td>
+<button class="btn-acao" title="Editar">
+                                    ✎
+                                </button>
+<button class="btn-acao" title="Mais opções">
+                                    ⋮
+                                </button>
+</td>
+</tr>
+<!-- USUÁRIO 2 -->
+<tr data-perfil="analista" data-status="ativo">
+<td>
+<div class="usuario-tabela">
+<div class="avatar-tabela roxo">
+                                        MA
+                                    </div>
+<div>
+<strong>
+                                            Maria Alves
+                                        </strong>
+<span>
+                                            maria@email.com
+                                        </span>
+</div>
+</div>
+</td>
+<td>
+<span class="perfil analista">
+                                    Analista de Dados
+                                </span>
+</td>
+<td>
+<span class="status ativo">
+<i></i>
+                                    Ativo
+                                </span>
+</td>
+<td>
+                                Hoje, 08:15
+                            </td>
+<td>
+<button class="btn-acao">
+                                    ✎
+                                </button>
+<button class="btn-acao">
+                                    ⋮
+                                </button>
+</td>
+</tr>
+<!-- USUÁRIO 3 -->
+<tr data-perfil="administrador" data-status="ativo">
+<td>
+<div class="usuario-tabela">
+<div class="avatar-tabela amarelo">
+                                        AD
+                                    </div>
+<div>
+<strong>
+                                            Admin Sistema
+                                        </strong>
+<span>
+                                            admin@safra.com
+                                        </span>
+</div>
+</div>
+</td>
+<td>
+<span class="perfil administrador">
+                                    Administrador
+                                </span>
+</td>
+<td>
+<span class="status ativo">
+<i></i>
+                                    Ativo
+                                </span>
+</td>
+<td>
+                                Hoje, 07:58
+                            </td>
+<td>
+<button class="btn-acao">
+                                    ✎
+                                </button>
+<button class="btn-acao">
+                                    ⋮
+                                </button>
+</td>
+</tr>
+<!-- USUÁRIO 4 -->
+<tr data-perfil="exportador" data-status="ativo">
+<td>
+<div class="usuario-tabela">
+<div class="avatar-tabela azul">
+                                        CS
+                                    </div>
+<div>
+<strong>
+                                            Carlos Santos
+                                        </strong>
+<span>
+                                            carlos@email.com
+                                        </span>
+</div>
+</div>
+</td>
+<td>
+<span class="perfil exportador">
+                                    Exportador
+                                </span>
+</td>
+<td>
+<span class="status ativo">
+<i></i>
+                                    Ativo
+                                </span>
+</td>
+<td>
+                                Ontem, 17:30
+                            </td>
+<td>
+<button class="btn-acao">
+                                    ✎
+                                </button>
+<button class="btn-acao">
+                                    ⋮
+                                </button>
+</td>
+</tr>
+<!-- USUÁRIO 5 -->
+<tr data-perfil="produtor" data-status="pendente">
+<td>
+<div class="usuario-tabela">
+<div class="avatar-tabela verde">
+                                        PS
+                                    </div>
+<div>
+<strong>
+                                            Pedro Souza
+                                        </strong>
+<span>
+                                            pedro@email.com
+                                        </span>
+</div>
+</div>
+</td>
+<td>
+<span class="perfil produtor">
+                                    Produtor
+                                </span>
+</td>
+<td>
+<span class="status pendente">
+<i></i>
+                                    Pendente
+                                </span>
+</td>
+<td>
+                                Nunca acessou
+                            </td>
+<td>
+<button class="btn-acao">
+                                    ✎
+                                </button>
+<button class="btn-acao">
+                                    ⋮
+                                </button>
+</td>
+</tr>
+<!-- USUÁRIO 6 -->
+<tr data-perfil="analista" data-status="inativo">
+<td>
+<div class="usuario-tabela">
+<div class="avatar-tabela roxo">
+                                        LF
+                                    </div>
+<div>
+<strong>
+                                            Lucas Ferreira
+                                        </strong>
+<span>
+                                            lucas@email.com
+                                        </span>
+</div>
+</div>
+</td>
+<td>
+<span class="perfil analista">
+                                    Analista de Dados
+                                </span>
+</td>
+<td>
+<span class="status inativo">
+<i></i>
+                                    Inativo
+                                </span>
+</td>
+<td>
+                                12/09/2026
+                            </td>
+<td>
+<button class="btn-acao">
+                                    ✎
+                                </button>
+<button class="btn-acao">
+                                    ⋮
+                                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- PAGINAÇÃO -->
+<div class="paginacao">
+<span>
+                    Mostrando 1–6 de 24 usuários
+                </span>
+<div class="paginas">
+<button class="pagina ativa">
+                        1
+                    </button>
+<button class="pagina">
+                        2
+                    </button>
+<button class="pagina">
+                        3
+                    </button>
+<button class="pagina">
+                        4
+                    </button>
+<button class="pagina">
+                        →
+                    </button>
+</div>
+</div>
+</section>
+<!-- ================= RODAPÉ ================= -->
+<footer>
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Sistema atualizado
+            </span>
+</footer>
+</main>
+
+</section>
+<script src="adm.js"></script>
+<script src="../thingspeak.js"></script>
+</body>
+</html>

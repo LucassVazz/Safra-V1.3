@@ -1,0 +1,3701 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safra — Analista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="analista.css">
+</head>
+<body>
+<section class="safra-page" id="analista.alertas" data-page-title="Safra | Alertas">
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#analista.inicial">
+<span class="menu-icon">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#analista.modelos">
+<span class="menu-icon">⌁</span>
+<span>Modelos</span>
+</a>
+<a class="menu-item" href="#analista.dados">
+<span class="menu-icon">▥</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#analista.previsoes">
+<span class="menu-icon">⌁</span>
+<span>Previsões</span>
+</a>
+<a class="menu-item" href="#analista.relatorios">
+<span class="menu-icon">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item ativo" href="#analista.alertas">
+<span class="menu-icon">♧</span>
+<span>Alertas</span>
+<span class="badge">2</span>
+</a>
+<a class="menu-item" href="#analista.configuracao">
+<span class="menu-icon">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item sair" href="login.html">
+<span class="menu-icon">↪</span>
+<span>Sair</span>
+</a>
+</nav>
+</aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span>⌕</span>
+<input placeholder="Buscar alerta, modelo..." type="text"/>
+</div>
+<div class="acoes-topo">
+<button class="notificacao">
+                    ♧
+                    <span>2</span>
+</button>
+<div class="perfil-topo">
+<div class="avatar">
+                        MA
+                    </div>
+<div class="dados-perfil">
+<strong>
+                            Maria Alves
+                        </strong>
+<small>
+                            Analista de Dados
+                        </small>
+</div>
+<span class="seta">
+                        ⌄
+                    </span>
+</div>
+</div>
+</header>
+<section class="cabecalho">
+<div class="titulo-area">
+<div class="titulo-icone">
+                    ♧
+                </div>
+<div>
+<h1>
+                        Alertas
+                    </h1>
+<p>
+                        Acompanhe ocorrências importantes nos modelos e dados da Safra.
+                    </p>
+</div>
+</div>
+<button class="btn-principal">
+                ✓ Marcar todos como lidos
+            </button>
+</section>
+<section class="atualizacao">
+<div class="atualizacao-icone">
+                !
+            </div>
+<div>
+<strong>
+                    2 alertas precisam da sua atenção
+                </strong>
+<p>
+                    Existem ocorrências que podem afetar o desempenho dos modelos preditivos.
+                </p>
+</div>
+<span class="tempo">
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </span>
+</section>
+<section class="cards-resumo">
+<div class="card resumo">
+<div class="icone vermelho">
+                    !
+                </div>
+<div>
+<span>
+                        Urgentes
+                    </span>
+<strong>
+                        1
+                    </strong>
+<small class="vermelho-texto">
+                        Requer ação imediata
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone amarelo">
+                    !
+                </div>
+<div>
+<span>
+                        Atenção
+                    </span>
+<strong>
+                        1
+                    </strong>
+<small class="atencao-texto">
+                        Verificar modelos
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone azul">
+                    i
+                </div>
+<div>
+<span>
+                        Informativos
+                    </span>
+<strong>
+                        4
+                    </strong>
+<small>
+                        Sem ação necessária
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone verde">
+                    ✓
+                </div>
+<div>
+<span>
+                        Total de alertas
+                    </span>
+<strong>
+                        6
+                    </strong>
+<small class="positivo">
+                        Monitoramento ativo
+                    </small>
+</div>
+</div>
+</section>
+<section class="card filtros-card">
+<div class="filtros-titulo">
+<div>
+<h2>
+                        Central de alertas
+                    </h2>
+<p>
+                        Filtre os alertas para encontrar rapidamente o que precisa ser analisado.
+                    </p>
+</div>
+<span class="total-alertas">
+                    2 não lidos
+                </span>
+</div>
+<div class="filtros">
+<select>
+<option>Status</option>
+<option>Todos</option>
+<option>Não lidos</option>
+<option>Lidos</option>
+</select>
+<select>
+<option>Prioridade</option>
+<option>Todas</option>
+<option>Urgente</option>
+<option>Atenção</option>
+<option>Informativo</option>
+</select>
+<select>
+<option>Categoria</option>
+<option>Todas</option>
+<option>Modelos</option>
+<option>Dados</option>
+<option>Previsões</option>
+<option>Sistema</option>
+</select>
+<button>
+                    Filtrar
+                </button>
+</div>
+</section>
+<section class="card alerta-destaque urgente">
+<div class="alerta-principal">
+<div class="alerta-grande vermelho">
+                    !
+                </div>
+<div>
+<div class="alerta-titulo">
+<h2>
+                            Estimativa de colheita
+                        </h2>
+<span class="tag urgente-tag">
+                            Urgente
+                        </span>
+</div>
+<p>
+                        A precisão do modelo caiu abaixo do nível recomendado.
+                        Uma recalibração deve ser realizada antes da próxima execução.
+                    </p>
+<div class="alerta-meta">
+<span>
+                            🧠 Modelo v1.8
+                        </span>
+<span>
+                            Hoje às 10:30
+                        </span>
+<span>
+                            Precisão atual: 89,4%
+                        </span>
+</div>
+</div>
+</div>
+<button class="btn-alerta vermelho-btn">
+                Ver modelo
+            </button>
+</section>
+<section class="card lista-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                        Alertas em atenção
+                    </h2>
+<p>
+                        Ocorrências que devem ser acompanhadas.
+                    </p>
+</div>
+<span class="contador">
+                    1 alerta
+                </span>
+</div>
+<div class="alerta-item">
+<div class="alerta-icon amarelo">
+                    !
+                </div>
+<div class="alerta-texto">
+<strong>
+                        Qualidade dos dados
+                    </strong>
+<span>
+                        Alguns registros apresentam inconsistências na base utilizada pelos modelos.
+                    </span>
+<small>
+                        Hoje às 09:15 • Dados
+                    </small>
+</div>
+<span class="status-alerta atencao">
+                    Atenção
+                </span>
+</div>
+</section>
+<section class="card lista-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                        Alertas informativos
+                    </h2>
+<p>
+                        Atualizações recentes do sistema.
+                    </p>
+</div>
+<a href="#">
+                    Ver todos
+                </a>
+</div>
+<div class="alerta-item">
+<div class="alerta-icon azul">
+                    i
+                </div>
+<div class="alerta-texto">
+<strong>
+                        Nova atualização de dados
+                    </strong>
+<span>
+                        2.340 novos registros foram processados com sucesso.
+                    </span>
+<small>
+                        Hoje • Dados
+                    </small>
+</div>
+<span class="status-alerta informativo">
+                    Informativo
+                </span>
+</div>
+<div class="alerta-item">
+<div class="alerta-icon azul">
+                    i
+                </div>
+<div class="alerta-texto">
+<strong>
+                        Modelo atualizado
+                    </strong>
+<span>
+                        O modelo de previsão climática foi atualizado para a versão v3.1.
+                    </span>
+<small>
+                        Ontem • Modelos
+                    </small>
+</div>
+<span class="status-alerta informativo">
+                    Informativo
+                </span>
+</div>
+<div class="alerta-item">
+<div class="alerta-icon azul">
+                    i
+                </div>
+<div class="alerta-texto">
+<strong>
+                        Nova previsão disponível
+                    </strong>
+<span>
+                        Uma nova previsão de produtividade está disponível para análise.
+                    </span>
+<small>
+                        Ontem • Previsões
+                    </small>
+</div>
+<span class="status-alerta informativo">
+                    Informativo
+                </span>
+</div>
+</section>
+<footer class="rodape">
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Última sincronização: <span data-ts="sync">há 15 segundos</span>
+            </span>
+</footer>
+</main>
+</section>
+<section class="safra-page" id="analista.configuracao" data-page-title="Configurações | Safra" style="display:none">
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#analista.inicial">
+<span class="menu-icon">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#analista.modelos">
+<span class="menu-icon">⌁</span>
+<span>Modelos</span>
+</a>
+<a class="menu-item" href="#analista.dados">
+<span class="menu-icon">▥</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#analista.previsoes">
+<span class="menu-icon">⌁</span>
+<span>Previsões</span>
+</a>
+<a class="menu-item" href="#analista.relatorios">
+<span class="menu-icon">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item" href="#analista.alertas">
+<span class="menu-icon">♧</span>
+<span>Alertas</span>
+<span class="badge">2</span>
+</a>
+<a class="menu-item ativo" href="#analista.configuracao">
+<span class="menu-icon">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item sair" href="login.html">
+<span class="menu-icon">↪</span>
+<span>Sair</span>
+</a>
+</nav></aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span>⌕</span>
+<input placeholder="Buscar configuração..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao">
+
+                    ♧
+
+                    <span>2</span>
+</button>
+<div class="usuario-topo">
+<div class="avatar">
+                        MA
+                    </div>
+<div class="dados-usuario">
+<strong>Maria Alves</strong>
+<small>Analista de Dados</small>
+</div>
+<span class="seta">⌄</span>
+</div>
+</div>
+</header>
+<section class="cabecalho">
+<div class="titulo-area">
+<div class="titulo-icone">
+                    ⚙️
+                </div>
+<div>
+<h1>Configurações</h1>
+<p>
+                        Gerencie suas informações, preferências e configurações da conta.
+                    </p>
+</div>
+</div>
+<button class="btn-principal">
+                ✓ Salvar alterações
+            </button>
+</section>
+<section class="config-card">
+<div class="config-titulo">
+<div class="config-icone verde">
+                    👤
+                </div>
+<div>
+<h2>Meu perfil</h2>
+<p>
+                        Atualize suas informações pessoais e dados de acesso.
+                    </p>
+</div>
+</div>
+<div class="perfil-area">
+<div class="perfil-avatar">
+                    MA
+                </div>
+<div class="perfil-dados">
+<strong>Maria Alves</strong>
+<span>Analista de Dados</span>
+<button class="btn-foto">
+                        Alterar foto
+                    </button>
+</div>
+</div>
+<div class="form-grid">
+<div class="campo">
+<label>Nome completo</label>
+<input type="text" value="Maria Alves"/>
+</div>
+<div class="campo">
+<label>E-mail</label>
+<input type="email" value="maria@email.com"/>
+</div>
+<div class="campo">
+<label>Telefone</label>
+<input type="text" value="(87) 99999-8888"/>
+</div>
+<div class="campo">
+<label>Tipo de usuário</label>
+<input disabled="" type="text" value="Analista de Dados"/>
+</div>
+</div>
+</section>
+<section class="config-card">
+<div class="config-titulo">
+<div class="config-icone amarelo">
+                    🔔
+                </div>
+<div>
+<h2>Notificações</h2>
+<p>
+                        Escolha quais avisos deseja receber da plataforma.
+                    </p>
+</div>
+</div>
+<div class="opcoes">
+<div class="opcao">
+<div>
+<strong>Alertas dos modelos</strong>
+<span>
+                            Receba avisos sobre desempenho, precisão e atualizações dos modelos.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="opcao">
+<div>
+<strong>Qualidade dos dados</strong>
+<span>
+                            Receba notificações sobre inconsistências, falhas e qualidade dos dados.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="opcao">
+<div>
+<strong>Previsões e análises</strong>
+<span>
+                            Receba atualizações sobre novas previsões e resultados dos modelos.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="opcao">
+<div>
+<strong>Relatórios</strong>
+<span>
+                            Receba avisos quando novos relatórios estiverem disponíveis.
+                        </span>
+</div>
+<label class="switch">
+<input type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+</div>
+</section>
+<section class="config-card">
+<div class="config-titulo">
+<div class="config-icone azul">
+                    ⚙
+                </div>
+<div>
+<h2>Preferências</h2>
+<p>
+                        Personalize a forma como você utiliza o sistema Safra.
+                    </p>
+</div>
+</div>
+<div class="preferencias-grid">
+<div class="campo">
+<label>Idioma</label>
+<select>
+<option selected="">
+                            Português (Brasil)
+                        </option>
+<option>
+                            English
+                        </option>
+</select>
+</div>
+<div class="campo">
+<label>Unidade de produção</label>
+<select>
+<option selected="">
+                            Tonelada (ton)
+                        </option>
+<option>
+                            Quilograma (kg)
+                        </option>
+</select>
+</div>
+<div class="campo">
+<label>Formato de data</label>
+<select>
+<option selected="">
+                            DD/MM/AAAA
+                        </option>
+<option>
+                            MM/DD/AAAA
+                        </option>
+</select>
+</div>
+<div class="campo">
+<label>Atualização dos dados</label>
+<select>
+<option selected="">
+                            Tempo real
+                        </option>
+<option>
+                            A cada 15 minutos
+                        </option>
+<option>
+                            A cada 1 hora
+                        </option>
+</select>
+</div>
+</div>
+</section>
+<section class="config-card">
+<div class="config-titulo">
+<div class="config-icone roxo">
+                    📊
+                </div>
+<div>
+<h2>Análise e modelos</h2>
+<p>
+                        Configure como os dados e modelos preditivos são apresentados.
+                    </p>
+</div>
+</div>
+<div class="opcoes">
+<div class="opcao">
+<div>
+<strong>Atualização automática dos modelos</strong>
+<span>
+                            Permite que os modelos sejam atualizados automaticamente com novos dados.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="opcao">
+<div>
+<strong>Exibir nível de confiança</strong>
+<span>
+                            Mostra o nível de confiança das previsões realizadas pelos modelos.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="opcao">
+<div>
+<strong>Alertas de baixa precisão</strong>
+<span>
+                            Avise quando a precisão de um modelo ficar abaixo do limite recomendado.
+                        </span>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+</div>
+</section>
+<section class="config-card">
+<div class="config-titulo">
+<div class="config-icone azul">
+                    🔒
+                </div>
+<div>
+<h2>Segurança</h2>
+<p>
+                        Gerencie sua senha e mantenha sua conta protegida.
+                    </p>
+</div>
+</div>
+<div class="seguranca">
+<div class="seguranca-info">
+<div class="seguranca-icon">
+                        🔑
+                    </div>
+<div>
+<strong>Senha</strong>
+<span>
+                            Última alteração há 30 dias
+                        </span>
+</div>
+</div>
+<button class="btn-secundario">
+                    Alterar senha
+                </button>
+</div>
+<div class="seguranca">
+<div class="seguranca-info">
+<div class="seguranca-icon">
+                        🛡️
+                    </div>
+<div>
+<strong>Autenticação em duas etapas</strong>
+<span>
+                            Adicione uma camada extra de segurança à sua conta.
+                        </span>
+</div>
+</div>
+<label class="switch">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+</section>
+<section class="config-card conta">
+<div>
+<h2>Conta</h2>
+<p>
+                    Ações relacionadas à sua conta no sistema.
+                </p>
+</div>
+<button class="btn-sair">
+                Sair da conta
+            </button>
+</section>
+<div class="rodape">
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Última sincronização: <span data-ts="sync">há 15 segundos</span>
+            </span>
+</div>
+</main>
+</section>
+<section class="safra-page" id="analista.dados" data-page-title="Safra | Dados" style="display:none">
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#analista.inicial">
+<span class="menu-icon">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#analista.modelos">
+<span class="menu-icon">⌁</span>
+<span>Modelos</span>
+</a>
+<a class="menu-item ativo" href="#analista.dados">
+<span class="menu-icon">▥</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#analista.previsoes">
+<span class="menu-icon">⌁</span>
+<span>Previsões</span>
+</a>
+<a class="menu-item" href="#analista.relatorios">
+<span class="menu-icon">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item" href="#analista.alertas">
+<span class="menu-icon">♧</span>
+<span>Alertas</span>
+<span class="badge">2</span>
+</a>
+<a class="menu-item" href="#analista.configuracao">
+<span class="menu-icon">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item sair" href="login.html">
+<span class="menu-icon">↪</span>
+<span>Sair</span>
+</a>
+</nav>
+</aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span>⌕</span>
+<input placeholder="Buscar dado, sensor, lote..." type="text"/>
+</div>
+<div class="acoes-topo">
+<button class="notificacao">
+
+                    ♧
+
+                    <span>2</span>
+</button>
+<div class="perfil-topo">
+<div class="avatar">
+                        MA
+                    </div>
+<div class="dados-perfil">
+<strong>
+                            Maria Alves
+                        </strong>
+<small>
+                            Analista de Dados
+                        </small>
+</div>
+<span class="seta">
+                        ⌄
+                    </span>
+</div>
+</div>
+</header>
+<section class="cabecalho">
+<div class="titulo-area">
+<div class="titulo-icone">
+                    📊
+                </div>
+<div>
+<h1>
+                        Dados
+                    </h1>
+<p>
+                        Monitore os dados utilizados pelos modelos preditivos da Safra.
+                    </p>
+</div>
+</div>
+<button class="btn-principal">
+                ↻ Atualizar dados
+            </button>
+</section>
+<section class="status-base">
+<div class="status-icon">
+                ✓
+            </div>
+<div>
+<strong>
+                    Base de dados operacional
+                </strong>
+<p>
+                    Os dados estão sendo recebidos e processados normalmente.
+                </p>
+</div>
+<span class="atualizado">
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </span>
+</section>
+<section class="cards-resumo">
+<div class="card resumo">
+<div class="icone verde">
+                    ▥
+                </div>
+<div>
+<span>
+                        Dados processados
+                    </span>
+<strong>
+                        18.452
+                    </strong>
+<small class="positivo">
+                        ↑ 8,4% este mês
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone azul">
+                    ✓
+                </div>
+<div>
+<span>
+                        Dados completos
+                    </span>
+<strong>
+                        98,6%
+                    </strong>
+<small>
+                        Qualidade da base
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone amarelo">
+                    !
+                </div>
+<div>
+<span>
+                        Dados pendentes
+                    </span>
+<strong>
+                        184
+                    </strong>
+<small class="atencao">
+                        Precisam de análise
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone roxo">
+                    ◷
+                </div>
+<div>
+<span>
+                        Última atualização
+                    </span>
+<strong data-ts="atualizado-curto">
+                        15s
+                    </strong>
+<small>
+                        Dados em tempo real
+                    </small>
+</div>
+</div>
+</section>
+<section class="card filtros">
+<div class="filtro">
+<label>Fonte dos dados</label>
+<select>
+<option>
+                        Todas as fontes
+                    </option>
+<option>
+                        Sensores
+                    </option>
+<option>
+                        Clima
+                    </option>
+<option>
+                        Produção
+                    </option>
+<option>
+                        Mercado
+                    </option>
+</select>
+</div>
+<div class="filtro">
+<label>Tipo de dado</label>
+<select>
+<option>
+                        Todos os tipos
+                    </option>
+<option>
+                        Climáticos
+                    </option>
+<option>
+                        Produção
+                    </option>
+<option>
+                        Solo
+                    </option>
+<option>
+                        Mercado
+                    </option>
+</select>
+</div>
+<div class="filtro">
+<label>Status</label>
+<select>
+<option>
+                        Todos
+                    </option>
+<option>
+                        Processados
+                    </option>
+<option>
+                        Pendentes
+                    </option>
+<option>
+                        Com inconsistências
+                    </option>
+</select>
+</div>
+<button class="btn-filtro">
+                Filtrar
+            </button>
+</section>
+<section class="grid-principal">
+<div class="card qualidade-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Qualidade dos dados
+                        </h2>
+<p>
+                            Indicadores da base utilizada pelos modelos.
+                        </p>
+</div>
+<span class="status-bom">
+                        ● Boa qualidade
+                    </span>
+</div>
+<div class="qualidade-principal">
+<strong>
+                        97,4%
+                    </strong>
+<span>
+                        Qualidade geral
+                    </span>
+</div>
+<div class="indicadores">
+<div class="indicador">
+<div class="indicador-topo">
+<span>
+                                Dados completos
+                            </span>
+<strong>
+                                98,6%
+                            </strong>
+</div>
+<div class="barra">
+<span style="width:98.6%"></span>
+</div>
+</div>
+<div class="indicador">
+<div class="indicador-topo">
+<span>
+                                Dados válidos
+                            </span>
+<strong>
+                                97,9%
+                            </strong>
+</div>
+<div class="barra">
+<span style="width:97.9%"></span>
+</div>
+</div>
+<div class="indicador">
+<div class="indicador-topo">
+<span>
+                                Dados atualizados
+                            </span>
+<strong>
+                                95,7%
+                            </strong>
+</div>
+<div class="barra">
+<span style="width:95.7%"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="card fontes-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Fontes de dados
+                        </h2>
+<p>
+                            Dados recebidos pelo sistema.
+                        </p>
+</div>
+</div>
+<div class="fonte-item">
+<div class="fonte-icon verde">
+                        ☁
+                    </div>
+<div class="fonte-info">
+<strong>
+                            Sensores climáticos
+                        </strong>
+<span>
+                            Temperatura e umidade
+                        </span>
+</div>
+<div class="fonte-status">
+<strong>8.240</strong>
+<span>registros</span>
+</div>
+</div>
+<div class="fonte-item">
+<div class="fonte-icon azul">
+                        🌱
+                    </div>
+<div class="fonte-info">
+<strong>
+                            Dados de produção
+                        </strong>
+<span>
+                            Lavouras e produtividade
+                        </span>
+</div>
+<div class="fonte-status">
+<strong>5.682</strong>
+<span>registros</span>
+</div>
+</div>
+<div class="fonte-item">
+<div class="fonte-icon amarelo">
+                        $
+                    </div>
+<div class="fonte-info">
+<strong>
+                            Dados de mercado
+                        </strong>
+<span>
+                            Preços e demanda
+                        </span>
+</div>
+<div class="fonte-status">
+<strong>2.430</strong>
+<span>registros</span>
+</div>
+</div>
+<div class="fonte-item">
+<div class="fonte-icon roxo">
+                        💧
+                    </div>
+<div class="fonte-info">
+<strong>
+                            Dados de irrigação
+                        </strong>
+<span>
+                            Umidade e consumo
+                        </span>
+</div>
+<div class="fonte-status">
+<strong>2.100</strong>
+<span>registros</span>
+</div>
+</div>
+</div>
+</section>
+<section class="grid-inferior">
+<div class="card processamento-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Processamento dos dados
+                        </h2>
+<p>
+                            Volume de dados processados nos últimos dias.
+                        </p>
+</div>
+<select>
+<option>
+                            Últimos 7 dias
+                        </option>
+<option>
+                            Últimos 30 dias
+                        </option>
+</select>
+</div>
+<div class="grafico">
+<div class="linha linha1"></div>
+<div class="linha linha2"></div>
+<div class="linha linha3"></div>
+<div class="linha linha4"></div>
+<div class="barras">
+<div class="barra-grafico" style="height:45%"></div>
+<div class="barra-grafico" style="height:58%"></div>
+<div class="barra-grafico" style="height:52%"></div>
+<div class="barra-grafico" style="height:68%"></div>
+<div class="barra-grafico" style="height:74%"></div>
+<div class="barra-grafico" style="height:82%"></div>
+<div class="barra-grafico" style="height:91%"></div>
+</div>
+<div class="dias">
+<span>04</span>
+<span>05</span>
+<span>06</span>
+<span>07</span>
+<span>08</span>
+<span>09</span>
+<span>10</span>
+</div>
+</div>
+</div>
+<div class="card inconsistencias-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Qualidade e inconsistências
+                        </h2>
+<p>
+                            Dados que precisam de atenção.
+                        </p>
+</div>
+<a href="#analista.alertas">
+                        Ver alertas
+                    </a>
+</div>
+<div class="inconsistencia">
+<div class="inconsistencia-icon amarelo">
+                        !
+                    </div>
+<div>
+<strong>
+                            Dados pendentes
+                        </strong>
+<span>
+                            184 registros aguardando processamento.
+                        </span>
+</div>
+</div>
+<div class="inconsistencia">
+<div class="inconsistencia-icon vermelho">
+                        !
+                    </div>
+<div>
+<strong>
+                            Dados inconsistentes
+                        </strong>
+<span>
+                            32 registros precisam ser revisados.
+                        </span>
+</div>
+</div>
+<div class="inconsistencia">
+<div class="inconsistencia-icon azul">
+                        i
+                    </div>
+<div>
+<strong>
+                            Nova fonte conectada
+                        </strong>
+<span>
+                            Sensores climáticos sincronizados.
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<section class="card tabela-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                        Dados recentes
+                    </h2>
+<p>
+                        Últimos registros processados pelo sistema.
+                    </p>
+</div>
+<button class="btn-secundario">
+                    Ver todos
+                </button>
+</div>
+<div class="tabela-wrapper">
+<table>
+<thead>
+<tr>
+<th>Fonte</th>
+<th>Tipo</th>
+<th>Registro</th>
+<th>Valor</th>
+<th>Status</th>
+<th>Atualização</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Sensor climático</strong>
+</td>
+<td>
+                                Temperatura
+                            </td>
+<td>
+                                Uva Vitória
+                            </td>
+<td data-ts="temperatura">
+                                28°C
+                            </td>
+<td>
+<span class="tag sucesso">
+                                    Processado
+                                </span>
+</td>
+<td data-ts="atualizado-curto">
+                                15s
+                            </td>
+</tr>
+<tr>
+<td>
+<strong>Sensor climático</strong>
+</td>
+<td>
+                                Umidade
+                            </td>
+<td>
+                                Uva Vitória
+                            </td>
+<td data-ts="umidade">
+                                68%
+                            </td>
+<td>
+<span class="tag sucesso">
+                                    Processado
+                                </span>
+</td>
+<td data-ts="atualizado-curto">
+                                15s
+                            </td>
+</tr>
+<tr>
+<td>
+<strong>Produção</strong>
+</td>
+<td>
+                                Produtividade
+                            </td>
+<td>
+                                Manga Palmer
+                            </td>
+<td>
+                                7,2 ton/ha
+                            </td>
+<td>
+<span class="tag sucesso">
+                                    Processado
+                                </span>
+</td>
+<td>
+                                2 min
+                            </td>
+</tr>
+<tr>
+<td>
+<strong>Mercado</strong>
+</td>
+<td>
+                                Preço
+                            </td>
+<td>
+                                Uva
+                            </td>
+<td>
+                                R$ 8,50/kg
+                            </td>
+<td>
+<span class="tag atencao">
+                                    Analisando
+                                </span>
+</td>
+<td>
+                                5 min
+                            </td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<footer class="rodape">
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Última sincronização: <span data-ts="sync">há 15 segundos</span>
+            </span>
+</footer>
+</main>
+</section>
+<section class="safra-page" id="analista.inicial" data-page-title="Safra | Inicial" style="display:none">
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item ativo" href="#analista.inicial">
+<span class="menu-icon">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#analista.modelos">
+<span class="menu-icon">⌁</span>
+<span>Modelos</span>
+</a>
+<a class="menu-item" href="#analista.dados">
+<span class="menu-icon">▥</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#analista.previsoes">
+<span class="menu-icon">⌁</span>
+<span>Previsões</span>
+</a>
+<a class="menu-item" href="#analista.relatorios">
+<span class="menu-icon">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item" href="#analista.alertas">
+<span class="menu-icon">♧</span>
+<span>Alertas</span>
+<span class="badge">2</span>
+</a>
+<a class="menu-item" href="#analista.configuracao">
+<span class="menu-icon">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item sair" href="login.html">
+<span class="menu-icon">↪</span>
+<span>Sair</span>
+</a>
+</nav>
+</aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span>⌕</span>
+<input placeholder="Buscar modelo, algoritmo..." type="text"/>
+</div>
+<div class="acoes-topo">
+<button class="notificacao">
+
+                    ♧
+
+                    <span>2</span>
+</button>
+<div class="perfil-topo">
+<div class="avatar">
+                        MA
+                    </div>
+<div class="dados-perfil">
+<strong>
+                            Maria Alves
+                        </strong>
+<small>
+                            Analista de Dados
+                        </small>
+</div>
+<span class="seta">
+                        ⌄
+                    </span>
+</div>
+</div>
+</header>
+<section class="cabecalho">
+<div class="titulo-area">
+<div class="titulo-icone">
+                    🧠
+                </div>
+<div>
+<h1>
+                        Olá, Maria!
+                    </h1>
+<p>
+                        Acompanhe os modelos preditivos e a qualidade dos dados da Safra.
+                    </p>
+</div>
+</div>
+<button class="btn-principal">
+                ↻ Atualizar dados
+            </button>
+</section>
+<section class="atualizacao">
+<div class="atualizacao-icone">
+                ✓
+            </div>
+<div>
+<strong>
+                    Dados atualizados
+                </strong>
+<p>
+                    Os modelos e indicadores foram atualizados recentemente.
+                </p>
+</div>
+<span class="tempo">
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </span>
+</section>
+<section class="cards-resumo">
+<div class="card resumo">
+<div class="icone verde">
+                    🧠
+                </div>
+<div>
+<span>
+                        Modelos ativos
+                    </span>
+<strong>
+                        6
+                    </strong>
+<small>
+                        Todos em operação
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone azul">
+                    ✓
+                </div>
+<div>
+<span>
+                        Precisão média
+                    </span>
+<strong>
+                        94,8%
+                    </strong>
+<small class="positivo">
+                        ↑ 3,2% este mês
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone amarelo">
+                    ◉
+                </div>
+<div>
+<span>
+                        Dados processados
+                    </span>
+<strong>
+                        18.452
+                    </strong>
+<small>
+                        Últimas 24 horas
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone roxo">
+                    📈
+                </div>
+<div>
+<span>
+                        Previsão da safra
+                    </span>
+<strong>
+                        842,3 ton
+                    </strong>
+<small class="positivo">
+                        ↑ 8,4% estimado
+                    </small>
+</div>
+</div>
+</section>
+<section class="grid-principal">
+<div class="card grafico-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Previsão x produção real
+                        </h2>
+<p>
+                            Comparação dos últimos 6 meses
+                        </p>
+</div>
+<select>
+<option>
+                            Últimos 6 meses
+                        </option>
+<option>
+                            Últimos 30 dias
+                        </option>
+<option>
+                            Este ano
+                        </option>
+</select>
+</div>
+<div class="legenda">
+<span>
+<i class="ponto previsao"></i>
+                        Previsão
+                    </span>
+<span>
+<i class="ponto producao"></i>
+                        Produção real
+                    </span>
+</div>
+<div class="grafico">
+<div class="linha linha1"></div>
+<div class="linha linha2"></div>
+<div class="linha linha3"></div>
+<div class="linha linha4"></div>
+<div class="barras">
+<div class="grupo">
+<div class="barra verde-barra" style="height:55%"></div>
+<div class="barra laranja-barra" style="height:47%"></div>
+</div>
+<div class="grupo">
+<div class="barra verde-barra" style="height:63%"></div>
+<div class="barra laranja-barra" style="height:58%"></div>
+</div>
+<div class="grupo">
+<div class="barra verde-barra" style="height:70%"></div>
+<div class="barra laranja-barra" style="height:66%"></div>
+</div>
+<div class="grupo">
+<div class="barra verde-barra" style="height:77%"></div>
+<div class="barra laranja-barra" style="height:73%"></div>
+</div>
+<div class="grupo">
+<div class="barra verde-barra" style="height:84%"></div>
+<div class="barra laranja-barra" style="height:80%"></div>
+</div>
+<div class="grupo">
+<div class="barra verde-barra" style="height:91%"></div>
+<div class="barra laranja-barra" style="height:87%"></div>
+</div>
+</div>
+<div class="meses">
+<span>Abr</span>
+<span>Mai</span>
+<span>Jun</span>
+<span>Jul</span>
+<span>Ago</span>
+<span>Set</span>
+</div>
+</div>
+</div>
+<div class="card status-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Status dos modelos
+                        </h2>
+<p>
+                            Desempenho atual
+                        </p>
+</div>
+<a href="#analista.modelos">
+                        Ver modelos
+                    </a>
+</div>
+<div class="modelo-status">
+<div class="modelo-info">
+<div class="mini-icone verde">
+                            🌱
+                        </div>
+<div>
+<strong>
+                                Previsão de produtividade
+                            </strong>
+<span>
+                                Modelo v2.4
+                            </span>
+</div>
+</div>
+<div class="modelo-precisao">
+<strong>
+                            96,2%
+                        </strong>
+<span>
+                            Excelente
+                        </span>
+</div>
+</div>
+<div class="modelo-status">
+<div class="modelo-info">
+<div class="mini-icone azul">
+                            ☁
+                        </div>
+<div>
+<strong>
+                                Previsão climática
+                            </strong>
+<span>
+                                Modelo v3.1
+                            </span>
+</div>
+</div>
+<div class="modelo-precisao">
+<strong>
+                            94,7%
+                        </strong>
+<span>
+                            Excelente
+                        </span>
+</div>
+</div>
+<div class="modelo-status">
+<div class="modelo-info">
+<div class="mini-icone amarelo">
+                            🌾
+                        </div>
+<div>
+<strong>
+                                Estimativa de colheita
+                            </strong>
+<span>
+                                Modelo v1.8
+                            </span>
+</div>
+</div>
+<div class="modelo-precisao atencao">
+<strong>
+                            89,4%
+                        </strong>
+<span>
+                            Recalibrar
+                        </span>
+</div>
+</div>
+<div class="modelo-status">
+<div class="modelo-info">
+<div class="mini-icone roxo">
+                            $
+                        </div>
+<div>
+<strong>
+                                Previsão de preço
+                            </strong>
+<span>
+                                Modelo v2.1
+                            </span>
+</div>
+</div>
+<div class="modelo-precisao">
+<strong>
+                            93,1%
+                        </strong>
+<span>
+                            Bom
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<section class="grid-inferior">
+<div class="card qualidade-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Qualidade dos dados
+                        </h2>
+<p>
+                            Monitoramento da base utilizada pelos modelos.
+                        </p>
+</div>
+<span class="status-bom">
+                        ● Boa qualidade
+                    </span>
+</div>
+<div class="qualidade-conteudo">
+<div class="qualidade-principal">
+<strong>
+                            97,4%
+                        </strong>
+<span>
+                            Qualidade geral
+                        </span>
+</div>
+<div class="qualidade-dados">
+<div>
+<span>
+                                Dados completos
+                            </span>
+<strong>
+                                98,6%
+                            </strong>
+</div>
+<div>
+<span>
+                                Dados válidos
+                            </span>
+<strong>
+                                97,9%
+                            </strong>
+</div>
+<div>
+<span>
+                                Dados atualizados
+                            </span>
+<strong>
+                                95,7%
+                            </strong>
+</div>
+</div>
+</div>
+<div class="barra-qualidade">
+<span></span>
+</div>
+</div>
+<div class="card alertas-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Alertas recentes
+                        </h2>
+<p>
+                            Atenção aos modelos e dados.
+                        </p>
+</div>
+<a href="#analista.alertas">
+                        Ver todos
+                    </a>
+</div>
+<div class="alerta-item">
+<div class="alerta-icon amarelo">
+                        !
+                    </div>
+<div>
+<strong>
+                            Estimativa de colheita
+                        </strong>
+<span>
+                            Recalibração recomendada
+                        </span>
+</div>
+<small>
+                        Hoje
+                    </small>
+</div>
+<div class="alerta-item">
+<div class="alerta-icon azul">
+                        i
+                    </div>
+<div>
+<strong>
+                            Nova atualização de dados
+                        </strong>
+<span>
+                            2.340 novos registros processados
+                        </span>
+</div>
+<small>
+                        Hoje
+                    </small>
+</div>
+</div>
+</section>
+<footer class="rodape">
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Última sincronização: <span data-ts="sync">há 15 segundos</span>
+            </span>
+</footer>
+</main>
+</section>
+<section class="safra-page" id="analista.modelos" data-page-title="Safra | Modelos" style="display:none">
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#analista.inicial">
+<span class="menu-icon">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item ativo" href="#analista.modelos">
+<span class="menu-icon">⌁</span>
+<span>Modelos</span>
+</a>
+<a class="menu-item" href="#analista.dados">
+<span class="menu-icon">▥</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#analista.previsoes">
+<span class="menu-icon">⌁</span>
+<span>Previsões</span>
+</a>
+<a class="menu-item" href="#analista.relatorios">
+<span class="menu-icon">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item" href="#analista.alertas">
+<span class="menu-icon">♧</span>
+<span>Alertas</span>
+<span class="badge">2</span>
+</a>
+<a class="menu-item" href="#analista.configuracao">
+<span class="menu-icon">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item sair" href="login.html">
+<span class="menu-icon">↪</span>
+<span>Sair</span>
+</a>
+</nav>
+</aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span>⌕</span>
+<input placeholder="Buscar modelo, algoritmo..." type="text"/>
+</div>
+<div class="acoes-topo">
+<button class="notificacao">
+                    ♧
+                    <span>2</span>
+</button>
+<div class="perfil-topo">
+<div class="avatar">
+                        MA
+                    </div>
+<div class="dados-perfil">
+<strong>
+                            Maria Alves
+                        </strong>
+<small>
+                            Analista de Dados
+                        </small>
+</div>
+<span class="seta">
+                        ⌄
+                    </span>
+</div>
+</div>
+</header>
+<section class="cabecalho">
+<div class="titulo-area">
+<div class="titulo-icone">
+                    🧠
+                </div>
+<div>
+<h1>
+                        Modelos preditivos
+                    </h1>
+<p>
+                        Gerencie os modelos utilizados nas previsões da Safra.
+                    </p>
+</div>
+</div>
+<button class="btn-principal">
+                + Criar novo modelo
+            </button>
+</section>
+<section class="atualizacao">
+<div class="atualizacao-icone">
+                ✓
+            </div>
+<div>
+<strong>
+                    Modelos operacionais
+                </strong>
+<p>
+                    Os modelos estão sendo monitorados e executados normalmente.
+                </p>
+</div>
+<span class="tempo">
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </span>
+</section>
+<section class="cards-resumo">
+<div class="card resumo">
+<div class="icone verde">
+                    🧠
+                </div>
+<div>
+<span>
+                        Modelos ativos
+                    </span>
+<strong>
+                        6
+                    </strong>
+<small>
+                        Todos em operação
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone azul">
+                    ✓
+                </div>
+<div>
+<span>
+                        Precisão média
+                    </span>
+<strong>
+                        94,8%
+                    </strong>
+<small class="positivo">
+                        ↑ 3,2% este mês
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone amarelo">
+                    ◉
+                </div>
+<div>
+<span>
+                        Em treinamento
+                    </span>
+<strong>
+                        2
+                    </strong>
+<small>
+                        Modelos sendo atualizados
+                    </small>
+</div>
+</div>
+<div class="card resumo">
+<div class="icone roxo">
+                    ↻
+                </div>
+<div>
+<span>
+                        Modelos atualizados
+                    </span>
+<strong>
+                        5
+                    </strong>
+<small class="positivo">
+                        Atualização recente
+                    </small>
+</div>
+</div>
+</section>
+<section class="card filtros-card">
+<div class="filtros-titulo">
+<div>
+<h2>Modelos cadastrados</h2>
+<p>
+                        Visualize e acompanhe o desempenho dos modelos.
+                    </p>
+</div>
+<span class="total-modelos">
+                    6 modelos
+                </span>
+</div>
+<div class="filtros">
+<select>
+<option>Status</option>
+<option>Todos</option>
+<option>Ativo</option>
+<option>Em treinamento</option>
+<option>Em atenção</option>
+</select>
+<select>
+<option>Tipo de modelo</option>
+<option>Produtividade</option>
+<option>Clima</option>
+<option>Colheita</option>
+<option>Preço</option>
+<option>Irrigação</option>
+</select>
+<select>
+<option>Ordenar por</option>
+<option>Maior precisão</option>
+<option>Menor precisão</option>
+<option>Mais recente</option>
+</select>
+<button>
+                    Filtrar
+                </button>
+</div>
+</section>
+<section class="modelos-grid">
+<div class="card modelo-card">
+<div class="modelo-topo">
+<div class="modelo-icone verde">
+                        🌱
+                    </div>
+<span class="status ativo-status">
+                        ● Ativo
+                    </span>
+</div>
+<h2>
+                    Previsão de produtividade
+                </h2>
+<p class="descricao">
+                    Estima a produtividade das lavouras com base nos dados históricos e condições atuais.
+                </p>
+<div class="modelo-dados">
+<div>
+<span>Precisão</span>
+<strong>96,2%</strong>
+</div>
+<div>
+<span>Versão</span>
+<strong>v2.4</strong>
+</div>
+</div>
+<div class="progresso">
+<div class="progresso-info">
+<span>Desempenho</span>
+<strong>Excelente</strong>
+</div>
+<div class="barra">
+<span style="width:96.2%"></span>
+</div>
+</div>
+<div class="modelo-footer">
+<small>
+                        Atualizado hoje
+                    </small>
+<a href="#">
+                        Ver modelo →
+                    </a>
+</div>
+</div>
+<div class="card modelo-card">
+<div class="modelo-topo">
+<div class="modelo-icone azul">
+                        ☁
+                    </div>
+<span class="status ativo-status">
+                        ● Ativo
+                    </span>
+</div>
+<h2>
+                    Previsão climática
+                </h2>
+<p class="descricao">
+                    Analisa dados climáticos para prever condições que podem afetar a produção.
+                </p>
+<div class="modelo-dados">
+<div>
+<span>Precisão</span>
+<strong>94,7%</strong>
+</div>
+<div>
+<span>Versão</span>
+<strong>v3.1</strong>
+</div>
+</div>
+<div class="progresso">
+<div class="progresso-info">
+<span>Desempenho</span>
+<strong>Excelente</strong>
+</div>
+<div class="barra">
+<span style="width:94.7%"></span>
+</div>
+</div>
+<div class="modelo-footer">
+<small>
+                        Atualizado ontem
+                    </small>
+<a href="#">
+                        Ver modelo →
+                    </a>
+</div>
+</div>
+<div class="card modelo-card">
+<div class="modelo-topo">
+<div class="modelo-icone amarelo">
+                        🌾
+                    </div>
+<span class="status atencao-status">
+                        ● Atenção
+                    </span>
+</div>
+<h2>
+                    Estimativa de colheita
+                </h2>
+<p class="descricao">
+                    Estima o melhor período para a colheita considerando maturação e condições climáticas.
+                </p>
+<div class="modelo-dados">
+<div>
+<span>Precisão</span>
+<strong class="numero-atencao">89,4%</strong>
+</div>
+<div>
+<span>Versão</span>
+<strong>v1.8</strong>
+</div>
+</div>
+<div class="progresso">
+<div class="progresso-info">
+<span>Desempenho</span>
+<strong class="texto-atencao">
+                            Recalibração recomendada
+                        </strong>
+</div>
+<div class="barra">
+<span class="barra-atencao" style="width:89.4%"></span>
+</div>
+</div>
+<div class="modelo-footer">
+<small>
+                        Atualizado há 2 dias
+                    </small>
+<a href="#">
+                        Ver modelo →
+                    </a>
+</div>
+</div>
+<div class="card modelo-card">
+<div class="modelo-topo">
+<div class="modelo-icone roxo">
+                        $
+                    </div>
+<span class="status ativo-status">
+                        ● Ativo
+                    </span>
+</div>
+<h2>
+                    Previsão de preço
+                </h2>
+<p class="descricao">
+                    Analisa mercado e demanda para estimar o preço dos produtos agrícolas.
+                </p>
+<div class="modelo-dados">
+<div>
+<span>Precisão</span>
+<strong>93,1%</strong>
+</div>
+<div>
+<span>Versão</span>
+<strong>v2.1</strong>
+</div>
+</div>
+<div class="progresso">
+<div class="progresso-info">
+<span>Desempenho</span>
+<strong>Bom</strong>
+</div>
+<div class="barra">
+<span style="width:93.1%"></span>
+</div>
+</div>
+<div class="modelo-footer">
+<small>
+                        Atualizado há 3 dias
+                    </small>
+<a href="#">
+                        Ver modelo →
+                    </a>
+</div>
+</div>
+<div class="card modelo-card">
+<div class="modelo-topo">
+<div class="modelo-icone azul">
+                        ◉
+                    </div>
+<span class="status treinamento-status">
+                        ● Treinamento
+                    </span>
+</div>
+<h2>
+                    Qualidade da produção
+                </h2>
+<p class="descricao">
+                    Identifica padrões de qualidade e possíveis alterações na produção agrícola.
+                </p>
+<div class="modelo-dados">
+<div>
+<span>Precisão</span>
+<strong>91,8%</strong>
+</div>
+<div>
+<span>Versão</span>
+<strong>v1.5</strong>
+</div>
+</div>
+<div class="progresso">
+<div class="progresso-info">
+<span>Treinamento</span>
+<strong>72%</strong>
+</div>
+<div class="barra">
+<span style="width:72%"></span>
+</div>
+</div>
+<div class="modelo-footer">
+<small>
+                        Atualização em andamento
+                    </small>
+<a href="#">
+                        Ver modelo →
+                    </a>
+</div>
+</div>
+<div class="card modelo-card">
+<div class="modelo-topo">
+<div class="modelo-icone verde">
+                        💧
+                    </div>
+<span class="status treinamento-status">
+                        ● Treinamento
+                    </span>
+</div>
+<h2>
+                    Necessidade de irrigação
+                </h2>
+<p class="descricao">
+                    Estima a necessidade de irrigação das lavouras com base no clima e umidade do solo.
+                </p>
+<div class="modelo-dados">
+<div>
+<span>Precisão</span>
+<strong>92,6%</strong>
+</div>
+<div>
+<span>Versão</span>
+<strong>v1.3</strong>
+</div>
+</div>
+<div class="progresso">
+<div class="progresso-info">
+<span>Treinamento</span>
+<strong>64%</strong>
+</div>
+<div class="barra">
+<span style="width:64%"></span>
+</div>
+</div>
+<div class="modelo-footer">
+<small>
+                        Atualização em andamento
+                    </small>
+<a href="#">
+                        Ver modelo →
+                    </a>
+</div>
+</div>
+</section>
+<footer class="rodape">
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                6 modelos cadastrados • Última sincronização: <span data-ts="sync">há 15 segundos</span>
+            </span>
+</footer>
+</main>
+</section>
+<section class="safra-page" id="analista.previsoes" data-page-title="Safra | Previsões" style="display:none">
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#analista.inicial">
+<span class="menu-icon">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#analista.modelos">
+<span class="menu-icon">⌁</span>
+<span>Modelos</span>
+</a>
+<a class="menu-item" href="#analista.dados">
+<span class="menu-icon">▥</span>
+<span>Dados</span>
+</a>
+<a class="menu-item ativo" href="#analista.previsoes">
+<span class="menu-icon">⌁</span>
+<span>Previsões</span>
+</a>
+<a class="menu-item" href="#analista.relatorios">
+<span class="menu-icon">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item" href="#analista.alertas">
+<span class="menu-icon">♧</span>
+<span>Alertas</span>
+<span class="badge">2</span>
+</a>
+<a class="menu-item" href="#analista.configuracao">
+<span class="menu-icon">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item sair" href="login.html">
+<span class="menu-icon">↪</span>
+<span>Sair</span>
+</a>
+</nav>
+</aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span>⌕</span>
+<input placeholder="Buscar previsão, modelo, lavoura..." type="text"/>
+</div>
+<div class="top-actions">
+<button class="notificacao">
+
+                    ♧
+
+                    <span>2</span>
+</button>
+<div class="usuario">
+<div class="avatar">
+                        MA
+                    </div>
+<div>
+<strong>
+                            Maria Alves
+                        </strong>
+<small>
+                            Analista de Dados
+                        </small>
+</div>
+<span class="seta">
+                        ⌄
+                    </span>
+</div>
+</div>
+</header>
+<section class="cabecalho">
+<div class="titulo">
+<div class="titulo-icone">
+                    🔮
+                </div>
+<div>
+<h1>
+                        Previsões
+                    </h1>
+<p>
+                        Acompanhe as previsões geradas pelos modelos preditivos da Safra.
+                    </p>
+</div>
+</div>
+<button class="botao-principal">
+                ↻ Atualizar previsões
+            </button>
+</section>
+<section class="status-base">
+<div class="status-icon">
+                ✓
+            </div>
+<div>
+<strong>
+                    Sistema preditivo operacional
+                </strong>
+<p>
+                    Os modelos estão processando novos dados e atualizando as previsões.
+                </p>
+</div>
+<span class="atualizado">
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </span>
+</section>
+<section class="indicadores">
+<div class="indicador">
+<div class="indicador-icon verde">
+                    ✦
+                </div>
+<div>
+<span>
+                        Previsões ativas
+                    </span>
+<strong>
+                        6
+                    </strong>
+<small class="positivo">
+                        ↑ 1 este mês
+                    </small>
+</div>
+</div>
+<div class="indicador">
+<div class="indicador-icon azul">
+                    ✓
+                </div>
+<div>
+<span>
+                        Precisão média
+                    </span>
+<strong>
+                        94,8%
+                    </strong>
+<small>
+                        Qualidade das previsões
+                    </small>
+</div>
+</div>
+<div class="indicador">
+<div class="indicador-icon amarelo">
+                    !
+                </div>
+<div>
+<span>
+                        Previsões em atenção
+                    </span>
+<strong>
+                        2
+                    </strong>
+<small class="atencao">
+                        Precisam de análise
+                    </small>
+</div>
+</div>
+<div class="indicador">
+<div class="indicador-icon roxo">
+                    ◷
+                </div>
+<div>
+<span>
+                        Última atualização
+                    </span>
+<strong data-ts="atualizado-curto">
+                        15s
+                    </strong>
+<small>
+                        Dados em tempo real
+                    </small>
+</div>
+</div>
+</section>
+<section class="filtros">
+<div class="filtro">
+<label>
+                    Tipo de previsão
+                </label>
+<select>
+<option>
+                        Todas as previsões
+                    </option>
+<option>
+                        Produtividade
+                    </option>
+<option>
+                        Clima
+                    </option>
+<option>
+                        Colheita
+                    </option>
+<option>
+                        Preço
+                    </option>
+</select>
+</div>
+<div class="filtro">
+<label>
+                    Lavoura
+                </label>
+<select>
+<option>
+                        Todas as lavouras
+                    </option>
+<option>
+                        Uva Vitória
+                    </option>
+<option>
+                        Manga Palmer
+                    </option>
+<option>
+                        Uva Itália
+                    </option>
+</select>
+</div>
+<div class="filtro">
+<label>
+                    Status
+                </label>
+<select>
+<option>
+                        Todos
+                    </option>
+<option>
+                        Atualizadas
+                    </option>
+<option>
+                        Em atenção
+                    </option>
+<option>
+                        Recalibração
+                    </option>
+</select>
+</div>
+<button class="botao-filtrar">
+                Filtrar
+            </button>
+</section>
+<section class="grid-principal">
+<div class="card previsao-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Previsão da safra
+                        </h2>
+<p>
+                            Estimativa atual de produção para o próximo ciclo.
+                        </p>
+</div>
+<span class="status-bom">
+                        ● Alta confiança
+                    </span>
+</div>
+<div class="previsao-principal">
+<strong>
+                        842,3 ton
+                    </strong>
+<span>
+                        Produção estimada
+                    </span>
+</div>
+<div class="previsao-info">
+<div class="info-previsao">
+<span>
+                            Precisão
+                        </span>
+<strong>
+                            96,2%
+                        </strong>
+</div>
+<div class="info-previsao">
+<span>
+                            Próxima atualização
+                        </span>
+<strong>
+                            15 min
+                        </strong>
+</div>
+<div class="info-previsao">
+<span>
+                            Tendência
+                        </span>
+<strong class="positivo">
+                            ↑ Favorável
+                        </strong>
+</div>
+</div>
+<div class="barra-previsao">
+<div class="barra-topo">
+<span>
+                            Confiança do modelo
+                        </span>
+<strong>
+                            96,2%
+                        </strong>
+</div>
+<div class="barra">
+<span style="width:96.2%"></span>
+</div>
+</div>
+</div>
+<div class="card modelos-previsao">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Desempenho das previsões
+                        </h2>
+<p>
+                            Precisão dos principais modelos ativos.
+                        </p>
+</div>
+</div>
+<div class="modelo-previsao-item">
+<div class="modelo-previsao-icon verde">
+                        🌱
+                    </div>
+<div class="modelo-previsao-info">
+<strong>
+                            Produtividade
+                        </strong>
+<span>
+                            Previsão de produção
+                        </span>
+</div>
+<div class="modelo-previsao-valor">
+<strong>
+                            96,2%
+                        </strong>
+<span>
+                            precisão
+                        </span>
+</div>
+</div>
+<div class="modelo-previsao-item">
+<div class="modelo-previsao-icon azul">
+                        ☁
+                    </div>
+<div class="modelo-previsao-info">
+<strong>
+                            Previsão climática
+                        </strong>
+<span>
+                            Condições meteorológicas
+                        </span>
+</div>
+<div class="modelo-previsao-valor">
+<strong>
+                            94,7%
+                        </strong>
+<span>
+                            precisão
+                        </span>
+</div>
+</div>
+<div class="modelo-previsao-item">
+<div class="modelo-previsao-icon amarelo">
+                        ◷
+                    </div>
+<div class="modelo-previsao-info">
+<strong>
+                            Estimativa de colheita
+                        </strong>
+<span>
+                            Janela de colheita
+                        </span>
+</div>
+<div class="modelo-previsao-valor alerta">
+<strong>
+                            89,4%
+                        </strong>
+<span>
+                            recalibrar
+                        </span>
+</div>
+</div>
+<div class="modelo-previsao-item">
+<div class="modelo-previsao-icon roxo">
+                        $
+                    </div>
+<div class="modelo-previsao-info">
+<strong>
+                            Preço de mercado
+                        </strong>
+<span>
+                            Estimativa de preço
+                        </span>
+</div>
+<div class="modelo-previsao-valor">
+<strong>
+                            93,1%
+                        </strong>
+<span>
+                            precisão
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<section class="grid-inferior">
+<div class="card tendencia-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Tendência da produção
+                        </h2>
+<p>
+                            Produção prevista para os próximos períodos.
+                        </p>
+</div>
+<select>
+<option>
+                            Próximos 7 dias
+                        </option>
+<option>
+                            Próximos 30 dias
+                        </option>
+</select>
+</div>
+<div class="grafico">
+<div class="linha linha1"></div>
+<div class="linha linha2"></div>
+<div class="linha linha3"></div>
+<div class="linha linha4"></div>
+<div class="barras">
+<div class="barra-grafico" style="height:48%"></div>
+<div class="barra-grafico" style="height:57%"></div>
+<div class="barra-grafico" style="height:53%"></div>
+<div class="barra-grafico" style="height:67%"></div>
+<div class="barra-grafico" style="height:73%"></div>
+<div class="barra-grafico" style="height:82%"></div>
+<div class="barra-grafico" style="height:91%"></div>
+</div>
+<div class="dias">
+<span>
+                            11
+                        </span>
+<span>
+                            12
+                        </span>
+<span>
+                            13
+                        </span>
+<span>
+                            14
+                        </span>
+<span>
+                            15
+                        </span>
+<span>
+                            16
+                        </span>
+<span>
+                            17
+                        </span>
+</div>
+</div>
+</div>
+<div class="card alertas-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Previsões em atenção
+                        </h2>
+<p>
+                            Previsões que precisam de acompanhamento.
+                        </p>
+</div>
+<a href="#analista.alertas">
+                        Ver alertas
+                    </a>
+</div>
+<div class="alerta-previsao">
+<div class="alerta-icon amarelo">
+                        !
+                    </div>
+<div>
+<strong>
+                            Estimativa de colheita
+                        </strong>
+<span>
+                            Precisão abaixo do nível recomendado.
+                        </span>
+</div>
+</div>
+<div class="alerta-previsao">
+<div class="alerta-icon vermelho">
+                        !
+                    </div>
+<div>
+<strong>
+                            Previsão climática
+                        </strong>
+<span>
+                            Novos dados podem alterar a previsão.
+                        </span>
+</div>
+</div>
+<div class="alerta-previsao">
+<div class="alerta-icon azul">
+                        i
+                    </div>
+<div>
+<strong>
+                            Modelo atualizado
+                        </strong>
+<span>
+                            Previsão de produtividade recalculada.
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<section class="card tabela-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                        Previsões recentes
+                    </h2>
+<p>
+                        Últimas previsões processadas pelos modelos.
+                    </p>
+</div>
+<button class="btn-secundario">
+                    Ver todas
+                </button>
+</div>
+<div class="tabela-wrapper">
+<table>
+<thead>
+<tr>
+<th>
+                                Modelo
+                            </th>
+<th>
+                                Tipo
+                            </th>
+<th>
+                                Lavoura
+                            </th>
+<th>
+                                Previsão
+                            </th>
+<th>
+                                Confiança
+                            </th>
+<th>
+                                Atualização
+                            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>
+                                    Produtividade
+                                </strong>
+</td>
+<td>
+                                Produção
+                            </td>
+<td>
+                                Uva Vitória
+                            </td>
+<td>
+                                8,4 ton/ha
+                            </td>
+<td>
+<span class="tag sucesso">
+                                    96,2%
+                                </span>
+</td>
+<td>
+                                15s
+                            </td>
+</tr>
+<tr>
+<td>
+<strong>
+                                    Previsão climática
+                                </strong>
+</td>
+<td>
+                                Clima
+                            </td>
+<td>
+                                Uva Vitória
+                            </td>
+<td>
+                                28°C
+                            </td>
+<td>
+<span class="tag sucesso">
+                                    94,7%
+                                </span>
+</td>
+<td>
+                                15s
+                            </td>
+</tr>
+<tr>
+<td>
+<strong>
+                                    Estimativa de colheita
+                                </strong>
+</td>
+<td>
+                                Colheita
+                            </td>
+<td>
+                                Manga Palmer
+                            </td>
+<td>
+                                18/09/2026
+                            </td>
+<td>
+<span class="tag atencao">
+                                    89,4%
+                                </span>
+</td>
+<td>
+                                2 min
+                            </td>
+</tr>
+<tr>
+<td>
+<strong>
+                                    Previsão de preço
+                                </strong>
+</td>
+<td>
+                                Mercado
+                            </td>
+<td>
+                                Uva
+                            </td>
+<td>
+                                R$ 8,50/kg
+                            </td>
+<td>
+<span class="tag sucesso">
+                                    93,1%
+                                </span>
+</td>
+<td>
+                                5 min
+                            </td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<footer class="rodape-modelos">
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Última sincronização: <span data-ts="sync">há 15 segundos</span>
+            </span>
+</footer>
+</main>
+</section>
+<section class="safra-page" id="analista.relatorios" data-page-title="Relatórios | Safra" style="display:none">
+<aside class="sidebar">
+<div class="logo-area">
+<img alt="Logo Safra" class="logo-img" src="img/logotipo.jpeg"/>
+<div class="logo-text">
+<h2>Safra</h2>
+<span>Vale do São Francisco</span>
+</div>
+</div>
+<nav class="menu">
+<a class="menu-item" href="#analista.inicial">
+<span class="menu-icon">⌂</span>
+<span>Inicial</span>
+</a>
+<a class="menu-item" href="#analista.modelos">
+<span class="menu-icon">⌁</span>
+<span>Modelos</span>
+</a>
+<a class="menu-item" href="#analista.dados">
+<span class="menu-icon">▥</span>
+<span>Dados</span>
+</a>
+<a class="menu-item" href="#analista.previsoes">
+<span class="menu-icon">⌁</span>
+<span>Previsões</span>
+</a>
+<a class="menu-item ativo" href="#analista.relatorios">
+<span class="menu-icon">▤</span>
+<span>Relatórios</span>
+</a>
+<a class="menu-item" href="#analista.alertas">
+<span class="menu-icon">♧</span>
+<span>Alertas</span>
+<span class="badge">2</span>
+</a>
+<a class="menu-item" href="#analista.configuracao">
+<span class="menu-icon">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item sair" href="login.html">
+<span class="menu-icon">↪</span>
+<span>Sair</span>
+</a>
+</nav>
+</aside>
+<main class="conteudo">
+<header class="topbar">
+<div class="busca">
+<span class="icone-busca">⌕</span>
+<input placeholder="Buscar relatório, modelo ou previsão..." type="text"/>
+</div>
+<div class="topbar-direita">
+<button class="notificacao">
+
+                    ♧
+
+                    <span class="ponto"></span>
+</button>
+<div class="usuario-top">
+<div class="avatar">
+                        MA
+                    </div>
+<div class="usuario-top-info">
+<strong>Maria Alves</strong>
+<span>Analista de Dados</span>
+</div>
+</div>
+</div>
+</header>
+<section class="cabecalho-pagina">
+<div>
+<div class="titulo-com-icone">
+<div class="icone-titulo">
+                        📊
+                    </div>
+<div>
+<h1>Relatórios</h1>
+<p>
+                            Gere e acompanhe relatórios sobre modelos,
+                            dados e previsões da Safra.
+                        </p>
+</div>
+</div>
+</div>
+<button class="btn-principal">
+<span>＋</span>
+
+                Gerar relatório
+
+            </button>
+</section>
+<section class="status-sistema">
+<div class="status-icone">
+                ✓
+            </div>
+<div class="status-texto">
+<strong>
+                    Sistema de relatórios operacional
+                </strong>
+<span>
+                    Os dados e previsões mais recentes estão
+                    disponíveis para análise.
+                </span>
+</div>
+<span class="atualizacao">
+                Atualizado <span data-ts="sync">há 15 segundos</span>
+            </span>
+</section>
+<section class="indicadores">
+<div class="card-indicador">
+<div class="indicador-top">
+<span class="indicador-icone">
+                        ▤
+                    </span>
+<span class="indicador-label">
+                        Relatórios disponíveis
+                    </span>
+</div>
+<strong class="indicador-valor">
+                    6
+                </strong>
+<span class="indicador-legenda">
+                    Tipos de relatório
+                </span>
+</div>
+<div class="card-indicador">
+<div class="indicador-top">
+<span class="indicador-icone">
+                        ✓
+                    </span>
+<span class="indicador-label">
+                        Relatórios gerados
+                    </span>
+</div>
+<strong class="indicador-valor">
+                    24
+                </strong>
+<span class="indicador-legenda">
+                    Neste período
+                </span>
+</div>
+<div class="card-indicador">
+<div class="indicador-top">
+<span class="indicador-icone">
+                        ◈
+                    </span>
+<span class="indicador-label">
+                        Dados processados
+                    </span>
+</div>
+<strong class="indicador-valor">
+                    18.452
+                </strong>
+<span class="indicador-legenda">
+                    Registros analisados
+                </span>
+</div>
+<div class="card-indicador">
+<div class="indicador-top">
+<span class="indicador-icone">
+                        ↻
+                    </span>
+<span class="indicador-label">
+                        Última atualização
+                    </span>
+</div>
+<strong class="indicador-valor" data-ts="sync-curto">
+                    15s
+                </strong>
+<span class="indicador-legenda">
+                    Sistema sincronizado
+                </span>
+</div>
+</section>
+<section class="filtros-card">
+<div class="filtros-titulo">
+<span>Filtros</span>
+<small>
+                    Personalize os relatórios apresentados
+                </small>
+</div>
+<div class="filtros">
+<div class="campo">
+<label for="tipo">
+                        Tipo de relatório
+                    </label>
+<select id="tipo">
+<option>Todos</option>
+<option>Dados</option>
+<option>Modelos</option>
+<option>Previsões</option>
+<option>Clima</option>
+<option>Desempenho</option>
+</select>
+</div>
+<div class="campo">
+<label for="periodo">
+                        Período
+                    </label>
+<select id="periodo">
+<option>Últimos 30 dias</option>
+<option>Últimos 7 dias</option>
+<option>Últimos 6 meses</option>
+<option>Último ano</option>
+</select>
+</div>
+<div class="campo">
+<label for="lavoura">
+                        Lavoura
+                    </label>
+<select id="lavoura">
+<option>Todas as lavouras</option>
+<option>Uva Vitória</option>
+<option>Manga Palmer</option>
+<option>Uva Itália</option>
+</select>
+</div>
+<button class="btn-filtrar">
+                    Filtrar
+                </button>
+</div>
+</section>
+<section class="grid-relatorios">
+<div class="card grande">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Resumo do desempenho
+                        </h2>
+<p>
+                            Visão geral dos principais indicadores
+                            do sistema.
+                        </p>
+</div>
+<span class="icone-card">
+                        📈
+                    </span>
+</div>
+<div class="desempenho">
+<div class="desempenho-item">
+<span>
+                            Precisão média
+                        </span>
+<strong>
+                            94,8%
+                        </strong>
+<div class="barra">
+<span style="width:94.8%"></span>
+</div>
+</div>
+<div class="desempenho-item">
+<span>
+                            Modelos ativos
+                        </span>
+<strong>
+                            6
+                        </strong>
+<div class="barra">
+<span style="width:80%"></span>
+</div>
+</div>
+<div class="desempenho-item">
+<span>
+                            Previsões processadas
+                        </span>
+<strong>
+                            842
+                        </strong>
+<div class="barra">
+<span style="width:88%"></span>
+</div>
+</div>
+<div class="desempenho-item">
+<span>
+                            Dados válidos
+                        </span>
+<strong>
+                            97,4%
+                        </strong>
+<div class="barra">
+<span style="width:97.4%"></span>
+</div>
+</div>
+</div>
+<div class="qualidade-dados">
+<div>
+<span>
+                            Qualidade geral dos dados
+                        </span>
+<strong>
+                            97,4%
+                        </strong>
+</div>
+<span class="status-verde">
+                        Excelente
+                    </span>
+</div>
+</div>
+<div class="card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Indicadores dos modelos
+                        </h2>
+<p>
+                            Precisão atual dos principais modelos.
+                        </p>
+</div>
+<span class="icone-card">
+                        ◈
+                    </span>
+</div>
+<div class="lista-indicadores">
+<div class="modelo-indicador">
+<div class="modelo-nome">
+<span class="bolinha verde"></span>
+<span>
+                                Previsão de produtividade
+                            </span>
+</div>
+<strong>
+                            96,2%
+                        </strong>
+</div>
+<div class="modelo-indicador">
+<div class="modelo-nome">
+<span class="bolinha verde"></span>
+<span>
+                                Previsão climática
+                            </span>
+</div>
+<strong>
+                            94,7%
+                        </strong>
+</div>
+<div class="modelo-indicador">
+<div class="modelo-nome">
+<span class="bolinha amarelo"></span>
+<span>
+                                Estimativa de colheita
+                            </span>
+</div>
+<strong>
+                            89,4%
+                        </strong>
+</div>
+<div class="modelo-indicador">
+<div class="modelo-nome">
+<span class="bolinha verde"></span>
+<span>
+                                Preço de mercado
+                            </span>
+</div>
+<strong>
+                            93,1%
+                        </strong>
+</div>
+</div>
+<div class="aviso-modelo">
+<span>!</span>
+<p>
+                        O modelo de estimativa de colheita
+                        necessita de recalibração.
+                    </p>
+</div>
+</div>
+</section>
+<section class="grid-relatorios segunda-linha">
+<div class="card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Evolução dos indicadores
+                        </h2>
+<p>
+                            Desempenho médio dos relatórios.
+                        </p>
+</div>
+<span class="periodo-card">
+                        Últimos 30 dias
+                    </span>
+</div>
+<div class="grafico">
+<div class="grafico-y">
+<span>100%</span>
+<span>75%</span>
+<span>50%</span>
+<span>25%</span>
+<span>0%</span>
+</div>
+<div class="grafico-area">
+<div class="linha-grafico linha-100"></div>
+<div class="linha-grafico linha-75"></div>
+<div class="linha-grafico linha-50"></div>
+<div class="linha-grafico linha-25"></div>
+<div class="linha-grafico linha-0"></div>
+<div class="barras">
+<div class="barra-grafico">
+<span style="height:76%"></span>
+<small>
+                                    12–18
+                                </small>
+</div>
+<div class="barra-grafico">
+<span style="height:82%"></span>
+<small>
+                                    19–25
+                                </small>
+</div>
+<div class="barra-grafico">
+<span style="height:88%"></span>
+<small>
+                                    26–01
+                                </small>
+</div>
+<div class="barra-grafico">
+<span style="height:91%"></span>
+<small>
+                                    02–08
+                                </small>
+</div>
+<div class="barra-grafico">
+<span style="height:95%"></span>
+<small>
+                                    09–15
+                                </small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                            Relatórios em destaque
+                        </h2>
+<p>
+                            Análises recentes disponíveis.
+                        </p>
+</div>
+</div>
+<div class="relatorios-destaque">
+<div class="relatorio-item">
+<div class="relatorio-icone">
+                            📊
+                        </div>
+<div class="relatorio-info">
+<strong>
+                                Desempenho dos modelos
+                            </strong>
+<span>
+                                Precisão média e evolução
+                            </span>
+</div>
+<button>
+                            Ver
+                        </button>
+</div>
+<div class="relatorio-item">
+<div class="relatorio-icone">
+                            ◈
+                        </div>
+<div class="relatorio-info">
+<strong>
+                                Qualidade dos dados
+                            </strong>
+<span>
+                                Integridade e consistência
+                            </span>
+</div>
+<button>
+                            Ver
+                        </button>
+</div>
+<div class="relatorio-item">
+<div class="relatorio-icone">
+                            🌱
+                        </div>
+<div class="relatorio-info">
+<strong>
+                                Previsão da safra
+                            </strong>
+<span>
+                                Estimativa e produtividade
+                            </span>
+</div>
+<button>
+                            Ver
+                        </button>
+</div>
+<div class="relatorio-item">
+<div class="relatorio-icone">
+                            ☁
+                        </div>
+<div class="relatorio-info">
+<strong>
+                                Análise climática
+                            </strong>
+<span>
+                                Condições e tendências
+                            </span>
+</div>
+<button>
+                            Ver
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<section class="card tabela-card">
+<div class="card-cabecalho">
+<div>
+<h2>
+                        Relatórios recentes
+                    </h2>
+<p>
+                        Últimos relatórios gerados pelo sistema.
+                    </p>
+</div>
+<button class="btn-secundario">
+                    Ver todos
+                </button>
+</div>
+<div class="tabela-container">
+<table>
+<thead>
+<tr>
+<th>
+                                Relatório
+                            </th>
+<th>
+                                Tipo
+                            </th>
+<th>
+                                Período
+                            </th>
+<th>
+                                Status
+                            </th>
+<th>
+                                Atualização
+                            </th>
+<th>
+                                Ação
+                            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="nome-relatorio">
+<span class="mini-icone">
+                                        📊
+                                    </span>
+<div>
+<strong>
+                                            Desempenho dos modelos
+                                        </strong>
+<small>
+                                            Análise geral dos modelos
+                                        </small>
+</div>
+</div>
+</td>
+<td>
+<span class="tipo">
+                                    Modelos
+                                </span>
+</td>
+<td>
+                                Setembro 2026
+                            </td>
+<td>
+<span class="status-tag sucesso">
+                                    Pronto
+                                </span>
+</td>
+<td>
+                                Há 15 segundos
+                            </td>
+<td>
+<button class="btn-ver">
+                                    Ver relatório
+                                </button>
+</td>
+</tr>
+<tr>
+<td>
+<div class="nome-relatorio">
+<span class="mini-icone">
+                                        ◈
+                                    </span>
+<div>
+<strong>
+                                            Qualidade dos dados
+                                        </strong>
+<small>
+                                            Validação dos registros
+                                        </small>
+</div>
+</div>
+</td>
+<td>
+<span class="tipo">
+                                    Dados
+                                </span>
+</td>
+<td>
+                                Setembro 2026
+                            </td>
+<td>
+<span class="status-tag sucesso">
+                                    Pronto
+                                </span>
+</td>
+<td>
+                                Há 2 minutos
+                            </td>
+<td>
+<button class="btn-ver">
+                                    Ver relatório
+                                </button>
+</td>
+</tr>
+<tr>
+<td>
+<div class="nome-relatorio">
+<span class="mini-icone">
+                                        🌱
+                                    </span>
+<div>
+<strong>
+                                            Previsão da safra
+                                        </strong>
+<small>
+                                            Estimativa de produção
+                                        </small>
+</div>
+</div>
+</td>
+<td>
+<span class="tipo">
+                                    Previsões
+                                </span>
+</td>
+<td>
+                                15–20 Setembro
+                            </td>
+<td>
+<span class="status-tag sucesso">
+                                    Pronto
+                                </span>
+</td>
+<td>
+                                Há 5 minutos
+                            </td>
+<td>
+<button class="btn-ver">
+                                    Ver relatório
+                                </button>
+</td>
+</tr>
+<tr>
+<td>
+<div class="nome-relatorio">
+<span class="mini-icone">
+                                        ☁
+                                    </span>
+<div>
+<strong>
+                                            Análise climática
+                                        </strong>
+<small>
+                                            Histórico das condições
+                                        </small>
+</div>
+</div>
+</td>
+<td>
+<span class="tipo">
+                                    Clima
+                                </span>
+</td>
+<td>
+                                Últimos 30 dias
+                            </td>
+<td>
+<span class="status-tag atencao">
+                                    Processando
+                                </span>
+</td>
+<td>
+                                Há 8 minutos
+                            </td>
+<td>
+<button class="btn-ver">
+                                    Ver relatório
+                                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<footer class="rodape-relatorios">
+<span>
+                Safra • Vale do São Francisco
+            </span>
+<span>
+                Última sincronização: <span data-ts="sync">há 15 segundos</span>
+            </span>
+</footer>
+</main>
+</section>
+<script src="analista.js"></script>
+<script src="../thingspeak.js"></script>
+</body>
+</html>

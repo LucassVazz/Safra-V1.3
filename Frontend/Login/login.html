@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Safra do Vale do São Francisco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <main class="pagina">
+
+        <!-- =====================================
+             LADO ESQUERDO
+        ====================================== -->
+
+        <section class="lado-esquerdo">
+
+            <div class="folhas">
+                <span class="folha folha1"></span>
+                <span class="folha folha2"></span>
+                <span class="folha folha3"></span>
+            </div>
+
+            <div class="conteudo-esquerdo">
+
+                <!-- LOGO -->
+                <img
+                    src="/Frontend/Login/img/logotipo.jpeg"
+                    alt="Logo Serrado Rio São Francisco"
+                    class="logo"
+                >
+
+                <!-- TÍTULO -->
+                <h1>
+                    SAFRA DO VALE DO
+                    <strong>SÃO FRANCISCO</strong>
+                </h1>
+
+                <!-- SUBTÍTULO -->
+                <p>
+                    Gestão inteligente para quem cuida<br>
+                    da terra todos os dias.
+                </p>
+
+            </div>
+
+            <!-- MASCOTE -->
+            <img
+                src="/Frontend/Login/img/veiomascote.png"
+                alt="Mascote produtor rural"
+                class="mascote"
+            >
+
+            <!-- CURVAS -->
+            <div class="curva-verde"></div>
+            <div class="curva-amarela"></div>
+
+        </section>
+
+
+        <!-- =====================================
+             LADO DIREITO
+        ====================================== -->
+
+        <section class="lado-direito">
+
+            <!-- Folhas do canto superior -->
+            <div class="folhas-direita">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+            <!-- CARD -->
+            <div class="card">
+
+                <!-- CABEÇALHO -->
+                <header class="cabecalho">
+
+                    <h2>
+                        Entrar na plataforma
+                    </h2>
+
+                   <p>
+                       Veja os perfis que atendemos.
+                  </p>
+
+                </header>
+
+
+                <!-- =================================
+                     PERFIS
+                ================================== -->
+
+                <div class="perfil-area">
+
+                    <div class="perfis">
+
+                        <!-- PRODUTOR -->
+                        <button
+                            type="button"
+                            class="perfil produtor selecionado" data-perfil="produtor"
+                        >
+
+                            <span class="icone">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21V10"></path>
+                                    <path d="M12 10C8 10 6 7 7 3c4 0 7 2 5 7Z"></path>
+                                    <path d="M12 13c2-4 5-5 7-4-1 4-3 6-7 6"></path>
+                                </svg>
+                            </span>
+
+                            <strong>Produtor</strong>
+
+                            <small>Uso diário</small>
+
+                        </button>
+
+
+                        <!-- ANALISTA -->
+                        <button
+                            type="button"
+                            class="perfil analista selecionado" data-perfil="analista"
+                        >
+
+                            <span class="icone">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 19V10"></path>
+                                    <path d="M12 19V5"></path>
+                                    <path d="M19 19V8"></path>
+                                </svg>
+                            </span>
+
+                            <strong>Analista</strong>
+
+                            <small>Uso técnico</small>
+
+                        </button>
+
+
+                        <!-- ADMINISTRADOR -->
+                        <button
+                            type="button"
+                            class="perfil administrador selecionado" data-perfil="administrador"
+                        >
+
+                            <span class="icone">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.8 1.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-2.5V20a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1-1.8-1.8.1-.1A1.7 1.7 0 0 0 8 15a1.7 1.7 0 0 0-1.6-1H6v-2.5h.2A1.7 1.7 0 0 0 8 10a1.7 1.7 0 0 0-.3-1.9l-.1-.1 1.8-1.8.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6v-.2h2.5V5a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.8 1.8-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2V14h-.2a1.7 1.7 0 0 0-1.6 1Z"></path>
+                                </svg>
+                            </span>
+
+                            <strong>Administrador</strong>
+
+                            <small>Uso esporádico</small>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     FORMULÁRIO
+                ================================== -->
+
+                <form id="formLogin" novalidate autocomplete="off">
+
+                    <!-- E-MAIL -->
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="campo-icone">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                    <path d="m4 7 8 6 8-6"></path>
+                                </svg>
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="voce@propriedade.com.br"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="campo-icone">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                                    <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                                </svg>
+                            </span>
+
+                            <input
+                                  type="password"
+                                  id="senha"
+                                  placeholder="••••••••"
+                                  autocomplete="new-password"
+>
+
+                            <button
+                                type="button"
+                                class="olho" id="mostrarSenha" aria-label="Mostrar senha"
+                            >
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M3 3l18 18"></path>
+                                    <path d="M10.6 10.6a2 2 0 0 0 2.8 2.8"></path>
+                                    <path d="M9.9 5.2A10.8 10.8 0 0 1 12 5c5 0 9 4 10 7-0.4 1.2-1.3 2.6-2.7 3.8"></path>
+                                    <path d="M6.2 6.2C4.5 7.4 3.3 9.1 2 12c1 3 5 7 10 7 1.2 0 2.3-.2 3.3-.6"></path>
+                                </svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LEMBRAR / ESQUECI -->
+                    <div class="opcoes">
+
+                        <label class="lembrar">
+
+                            <input type="checkbox">
+
+                            <span>
+                                Lembrar de mim
+                            </span>
+
+                        </label>
+
+                        <a href="#" id="esqueciSenha">
+                            Esqueceu a senha?
+                        </a>
+
+                    </div>
+
+
+                    
+                    <button
+                        type="submit"
+                        class="botao"
+                    >
+
+                        <span class="botao-texto">Entrar</span><span class="seta">→</span>
+
+                    </button>
+
+
+                    <!-- AJUDA -->
+                    <div class="ajuda">
+
+                        <span class="ajuda-icone">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="7" r="3"></circle>
+                                <path d="M5 20c.5-3.5 3-5 7-5s6.5 1.5 7 5"></path>
+                            </svg>
+                        </span>
+
+                        <span>
+                            Precisa de acesso? Fale com o administrador
+                            da sua propriedade.
+                        </span>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="login.js"></script>
+</body>
+
+</html>
